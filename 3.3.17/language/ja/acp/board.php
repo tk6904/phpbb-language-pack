@@ -48,7 +48,7 @@ $lang = array_merge($lang, array(
 	'BOARD_STYLE'				=> '掲示板のスタイル',
 	'CUSTOM_DATEFORMAT'			=> 'カスタム…',
 	'DEFAULT_DATE_FORMAT'			=> '日付フォーマット',
-	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'PHP の <code><a href="https://secure.php.net/manual/function.date.php">date()</a></code> 関数で使われる形式と同じです',
+	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'PHP の <a href="https://www.php.net/manual/datetime.format.php">日時フォーマット</a>と同じ書式を使用します。',
 	'DEFAULT_LANGUAGE'			=> 'デフォルト言語',
 	'DEFAULT_STYLE'				=> 'デフォルトスタイル',
 	'DEFAULT_STYLE_EXPLAIN'			=> '新規登録ユーザーのための初期設定スタイルです',
@@ -302,7 +302,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_OVERALL_FORUMS_EXPLAIN'		=> 'フォーラムをフィードします。掲示板の全てのフォーラムが対象です。',
 
 	'ACP_FEED_HTTP_AUTH'				=> 'HTTP認証',
-	'ACP_FEED_HTTP_AUTH_EXPLAIN'			=> '有効にした場合、フィードURL の末尾にパラメータ <samp>auth=http</samp> を追加することによって HTTP認証 を行うようになります。認証に成功したユーザーは、プライベートな（ゲストが見れない） フォーラム/トピック/記事 を含んだフィードを受け取れます。PHP の設定によっては phpBB3 ルートディレクトリ直下のファイル .htaccess を編集する必要がある点にご注意ください。詳しくはその .htaccess ファイルをご覧ください。',
+	'ACP_FEED_HTTP_AUTH_EXPLAIN'			=> 'HTTP認証を有効にします。これにより、フィードURL の末尾にパラメータ <samp>auth=http</samp> を追加することで、ゲストには非表示のコンテンツを認証済みユーザーが取得できるようになります。PHP の設定によっては .htaccess ファイルの追加変更が必要な場合があります。詳しくはその .htaccess ファイルをご覧ください。なお、HTTP認証 は暗号化された (https) 接続でのみサポートされます。',
   	'ACP_FEED_ITEM_STATISTICS'			=> '統計データの表示',
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'		=> '有効にした場合、統計データ（投稿者、投稿日時、返信数、閲覧数）を表示します',
   	'ACP_FEED_EXCLUDE_ID'				=> 'フィードの無効化',
@@ -391,7 +391,7 @@ $lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'ここではサーバの CPU負荷 を減らすため、掲示板の機能をいくつか無効にできます。ほとんどのサーバではどの機能も無効にする必要はないでしょう。しかしシェアされたホスティング環境などでは必要のない機能を無効化すると有益かもしれません。またロードアベレージや有効なセッション数を制限する事によって、無効なセッションを割り当てられたユーザーに対して掲示板を自動的にオフラインに移行させたりする事もできます。',
 
 	'ALLOW_CDN'				=> 'サードパーティのCDN（コンテンツデリバリーネットワーク）の利用を許可する',
-	'ALLOW_CDN_EXPLAIN'			=> 'この設定を有効にした場合、いくつかのファイルはあなたのサーバーに代わり外部サードパーティのサーバーから提供されます。これはあなたのサーバーにかかるネットワーク帯域負荷を減らしますが、一部の管理者には配信問題をもたらすかもしれません。デフォルトのphpBBインストールでは、jQueryの読み込みとGoogleフォント“Open Sans” の読み込みを含んでいます。',
+	'ALLOW_CDN_EXPLAIN'			=> 'この設定を有効にした場合、いくつかのファイルはあなたのサーバーに代わり外部サードパーティのサーバーから提供されます。これはあなたのサーバーにかかるネットワーク帯域負荷を減らしますが、一部の国では privacy 上の問題となる場合があります。デフォルトの phpBB インストールでは、jQuery と Google フォント “Open Sans” を Google の CDN から読み込みます。これは phpBB や一部の拡張機能がアイコン表示に使う “Font Awesome” フォントにも適用されます。',
 	'ALLOW_LIVE_SEARCHES'			=> 'ライブサーチを許可する',
 	'ALLOW_LIVE_SEARCHES_EXPLAIN'		=> 'もしこの設定が有効の場合、 検索フィールド入力中のユーザーにキーワードサジェストが提供されます。',
 	'CUSTOM_PROFILE_FIELDS'			=> 'カスタムプロフィールフィールド',
@@ -495,7 +495,7 @@ $lang = array_merge($lang, array(
 	'SCRIPT_PATH'				=> 'スクリプトパス',
 	'SCRIPT_PATH_EXPLAIN'			=> 'phpBB ルートディレクトリへのパスです。ドメインから見た相対パスで指定する必要があります。例: <samp>/phpBB3</samp>',
 	'SERVER_NAME'				=> 'ドメイン',
-	'SERVER_NAME_EXPLAIN'			=> 'この掲示板が運用されるドメインです (例: <samp>www.example.com</samp>)',
+	'SERVER_NAME_EXPLAIN'			=> 'この掲示板が運用されるドメインです (例: <samp>example.com</samp>)',
 	'SERVER_PORT'				=> 'サーバポート番号',
 	'SERVER_PORT_EXPLAIN'			=> 'サーバが使用するポート番号です。多くの場合、ポート番号は 80 です。もし違う場合は変更してください。',
 	'SERVER_PROTOCOL'			=> 'サーバプロトコル',
@@ -505,8 +505,8 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'			=> 'phpBB ルートディレクトリから見た相対パスで指定する必要があります。例: <samp>images/smilies</samp>',
 	'UPLOAD_ICONS_PATH'			=> '拡張子グループアイコン画像の格納パス',
 	'UPLOAD_ICONS_PATH_EXPLAIN'		=> 'phpBB ルートディレクトリから見た相対パスで指定する必要があります。例: <samp>images/upload_icons</samp>',
-	'USE_SYSTEM_CRON'		=> 'システムの cron タスクを動作させる',
-	'USE_SYSTEM_CRON_EXPLAIN'		=> 'OFFにした場合、phpBB は時限自動タスクが動作するように準備します。ONにした場合、phpBB は自身ではいかなる時限タスクもスケジューリングしません。システム管理者はシステムが定期間隔（例： 毎 5 分おき）で cron を動かすよう <code>bin/phpbbcli.php cron:run</code> を準備しなければなりません。',
+	'USE_SYSTEM_CRON'		=> 'OS の cron タスクを動作させる',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> '無効にした場合、phpBB は時限自動タスクが動作するように準備します。有効にした場合、phpBB は自身ではいかなる時限タスクもスケジューリングしません。システム管理者は OS の cron 機能が定期間隔（例： 5 分おき）で <code>bin/phpbbcli.php cron:run</code> を実行するよう準備しなければなりません。',
 ));
 
 // Security Settings

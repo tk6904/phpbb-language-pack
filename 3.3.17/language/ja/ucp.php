@@ -124,7 +124,7 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY'					=> '誕生日',
 	'BIRTHDAY_EXPLAIN'			=> ' “年” を指定すると誕生日に年齢が表示されます',
 	'BOARD_DATE_FORMAT'			=> '日付フォーマット',
-	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'フォーマットは PHP の <a href="https://secure.php.net/manual/function.date.php">date()</a> 関数で使われているものと同様です',
+	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'PHP の <a href="https://www.php.net/manual/datetime.format.php">日時フォーマット</a>と同じ書式を使用します。',
 	'BOARD_LANGUAGE'			=> '掲示板の言語',
 	'BOARD_STYLE'				=> '掲示板のスタイル',
 	'BOARD_TIMEZONE'			=> 'タイムゾーン',

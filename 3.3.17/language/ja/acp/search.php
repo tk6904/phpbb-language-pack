@@ -56,7 +56,7 @@ $lang = array_merge($lang, array(
 	'DEFAULT_SEARCH_RETURN_CHARS'			=> 'デフォルトで返される文字数',
 	'DEFAULT_SEARCH_RETURN_CHARS_EXPLAIN'	=> '検索中に返される文字数を指定します。値が0の場合は投稿全体を返します。',
 	'DELETE_INDEX'					=> 'インデックス削除',
-	'DELETING_INDEX_IN_PROGRESS'			=> 'インデックス削除の処理中です',
+	'DELETING_INDEX_IN_PROGRESS'			=> 'インデックス削除の処理中です…',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'		=> '検索バックエンドは現在、インデックスを削除中です。処理が終わるには数分かかる事もあります。',
 
 	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'		=> 'MySQL fulltext バックエンドは MySQL4 以上 でのみ利用可能です',
@@ -96,7 +96,7 @@ $lang = array_merge($lang, array(
 	'GO_TO_SEARCH_INDEX'				=> '“検索インデックス” ページへ移動',
 
 	'INDEX_STATS'					=> 'インデックス統計',
-	'INDEXING_IN_PROGRESS'				=> 'インデックス作成中',
+	'INDEXING_IN_PROGRESS'				=> 'インデックス作成中…',
 	'INDEXING_IN_PROGRESS_EXPLAIN'			=> '検索バックエンドは現在、掲示板の全投稿記事をインデックスしています。記事数によっては数分から数時間かかる事もあります',
 
 	'LIMIT_SEARCH_LOAD'					=> 'サーバCPU使用率の制限',
@@ -116,16 +116,16 @@ $lang = array_merge($lang, array(
 	'SEARCH_GUEST_INTERVAL'					=> 'ゲストに対する連続検索制限',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'				=> 'ゲストが連続して検索する際、検索と検索の間にインターバルとして挟まれる秒数です。個々のゲストに対してチェックされます。この機能を無効にしたい場合は 0 を入力してください。',
 	'SEARCH_INDEX_CREATE_REDIRECT'			=> array(
-		1	=> '記事ID %2$d までインデックスを完了しました。このステップで %1$d 個の記事をインデックスしました。<br />インデックス作成はまだ進行中です…',
+		1	=> '記事ID %2$d までインデックスを完了しました。このステップで %1$d 個の記事をインデックスしました。',
 	),
 	'SEARCH_INDEX_CREATE_REDIRECT_RATE'		=> array(
-		1	=> '現在のインデックス率はおよそ %1$.1f 記事/秒 です。<br />インデックス作成はまだ進行中です…',
+		1	=> '現在のインデックス率はおよそ %1$.1f 記事/秒 です。',
 	),
 	'SEARCH_INDEX_DELETE_REDIRECT'			=> array(
 		1	=> '記事ID %2$d までのインデックスを削除しました。このステップで %1$d 個の記事をインデックスしました。',
 	),
 	'SEARCH_INDEX_DELETE_REDIRECT_RATE'		=> array(
-		1	=> '現在の削除進行率はおよそ %1$.1f 記事/秒 です。<br />削除作業はまだ進行中です…',
+		1	=> '現在の削除進行率はおよそ %1$.1f 記事/秒 です。',
 	),
 	'SEARCH_INDEX_CREATED'					=> 'インデックスの作成に成功しました',
 	'SEARCH_INDEX_PROGRESS'					=> '完了: %1$d | 残り: %2$d | 合計: %3$d',

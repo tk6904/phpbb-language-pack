@@ -163,9 +163,9 @@ $lang = array_merge($lang, array(
 	'ACL_M_MERGE'	=> 'トピックの統合',
 
 	'ACL_M_INFO'		=> '記事の詳細の閲覧',
-	'ACL_M_WARN'		=> '警告<br /><em>このオプションはグローバルパーミッションとして適用されます。ローカルパーミッションとして適用されることはありません。</em>', // This moderator setting is only global (and not local)
-	'ACL_M_PM_REPORT'	=> 'PM 通報の審査と削除<br /><em>このオプションはグローバルパーミッションとして適用されます。ローカルパーミッションとして適用されることはありません。</em>', // This moderator setting is only global (and not local)
-	'ACL_M_BAN'			=> 'アクセス禁止の管理<br /><em>このオプションはグローバルパーミッションとして適用されます。ローカルパーミッションとして適用されることはありません。</em>', // This moderator setting is only global (and not local)
+	'ACL_M_WARN'		=> '警告',
+	'ACL_M_PM_REPORT'	=> 'PM 通報の審査と削除',
+	'ACL_M_BAN'			=> 'アクセス禁止の管理',
 ));
 
 // Admin Permissions
