@@ -80,7 +80,7 @@ $lang = array_merge($lang, array(
 
 	'TOKEN'					=> 'トークン',
 	'TOKENS'				=> 'トークンとは',
-	'TOKENS_EXPLAIN'		=> 'トークン (token) の概念を一言で表現すればそれは “抽象化された代替物” です。 <em>トークン (token) の概念を例を用いて具体的に説明しましょう。明治時代初期、政府が誕生してからまだ日が浅かった為に日本で円は流通していませんでした。その当時の人々の経済はおそらく物々交換経済か、あるいは貨幣としてお米か金 （きん） を使用していたはずです。当時は治安が悪かったので、人々は安全の為により信用のおける資産家の蔵に自分のお米や金を預け（貸し）たいと考えたでしょう。お米か金を預かった資産家は借りた相手に当然 “借用書” を渡します。その “借用書” がトークンです。その借用書をその資産家に持って行きさえすればいつでもお米か金に交換する事ができたので、お米か金をその場で持っていなくても人々はその借用書で物を買ったり売ったりする事ができました。実際には借用書自体はただの紙切れに過ぎないにもかかわらず、その紙切れがまさにお米か金そのものであるかのように振舞っています。すなわち、“借用書という紙切れ” ＝ “お米や金の代替物” ＝ “お米や金のトークン” という事です。</em><br /><br />トークンとして使用可能な型は数値だけでなく、文字列（テキスト、メールアドレス、URL、HTMLカラー等）も使用できます。当然、文章作成の際に BBCode に入力する型とそれに対応するトークンの型は一致している必要があります。同じトークンを複数使用する場合は {TEXT1}, {TEXT2} のようにトークン名の後ろに数値を付け足してください。 BBCode を作成する際、language/ja ディレクトリ内の各ファイルで定義されている言語キーを {L_<em>&lt;STRINGNAME&gt;</em>} の形で使用する事ができます。例えば、トークン {L_WROTE} は “さんが書きました” に置換されます。<br /><br /><strong>※カスタム BBCode 内で使用できるトークンは、下記に列挙されているもののみです。</strong>',
+	'TOKENS_EXPLAIN'		=> 'トークン (token) の概念を一言で表現すればそれは “抽象化された代替物” です。<br /><em>トークン (token) の概念を例を用いて具体的に説明しましょう。明治時代初期、政府が誕生してからまだ日が浅かった為に日本で円は流通していませんでした。その当時の人々の経済はおそらく物々交換経済か、あるいは貨幣としてお米か金 （きん） を使用していたはずです。当時は治安が悪かったので、人々は安全の為により信用のおける資産家の蔵に自分のお米や金を預け（貸し）たいと考えたでしょう。お米か金を預かった資産家は借りた相手に当然 “借用書” を渡します。その “借用書” がトークンです。その借用書をその資産家に持って行きさえすればいつでもお米か金に交換する事ができたので、お米か金をその場で持っていなくても人々はその借用書で物を買ったり売ったりする事ができました。実際には借用書自体はただの紙切れに過ぎないにもかかわらず、その紙切れがまさにお米か金そのものであるかのように振舞っています。すなわち、“借用書という紙切れ” ＝ “お米や金の代替物” ＝ “お米や金のトークン” という事です。</em><br /><br />トークンとして使用可能な型は数値だけでなく、文字列（テキスト、メールアドレス、URL、HTMLカラー等）も使用できます。当然、文章作成の際に BBCode に入力する型とそれに対応するトークンの型は一致している必要があります。同じトークンを複数使用する場合は {TEXT1}, {TEXT2} のようにトークン名の後ろに数値を付け足してください。<br /><br />BBCode を作成する際、language/ja ディレクトリ内の各ファイルで定義されている言語キーを {L_<em>&lt;STRINGNAME&gt;</em>} の形で使用する事ができます。例えば、トークン {L_WROTE} は “さんが書きました” に置換されます。',
 	'TOKEN_DEFINITION'		=> '何のトークンか？',
 	'TOO_MANY_BBCODES'		=> 'BBCode をこれ以上作成できません。BBCode を１つ以上削除してからもう一度作成してください。',
 
@@ -94,22 +94,8 @@ $lang = array_merge($lang, array(
 		'URL'			=> 'http, ftp など、許可されたプロトコルを含む絶対URL（JavaScript コード内では無視されます）。プロトコルが指定されなかった場合、“http://” が自動的に挿入されます。',
 		'LOCAL_URL'		=> 'ローカルURL。この掲示板から見た相対的な URL です。サーバ名（ホストまたはドメイン）とプロトコルは含まれません。自動的に “%s” でプリフィクスされます。',
 		'RELATIVE_URL'	=> '相対URL。必ずしも 相対URL である必要はなく、URL の一部分であれば問題ありません。完全な URL であっても問題ありません。この掲示板から見た相対的な URL を表したい場合は {LOCAL_URL} の方が便利です。',
-		'COLOR'			=> 'HTMLカラー。<samp>#FF1234</samp> のような数値形式か、 <samp>fuchsia</samp> または <samp>InactiveBorder</samp> のような <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">CSSカラーキーワード</a> です。',
-		'ALNUM'			=> '半角アルファベット (A-Z) と半角数字 (0-9)。',
-		'CHOICE'		=> '指定された値からの選択。例: <samp>{CHOICE=spades,hearts,diamonds,clubs}</samp> 値はデフォルトで大文字小文字を区別しません。<samp>caseSensitive</samp> オプションを指定すると区別するようになります: <samp>{CHOICE=Spades,Hearts,Diamonds,Clubs;caseSensitive}</samp>',
-		'FLOAT'			=> '小数値。例: <samp>0.5</samp>。',
-		'HASHMAP'		=> '文字列を置換マッピングする型。形式: <samp>{HASHMAP=string1:replacement1,string2:replacement2}</samp> 大文字小文字を区別します。デフォルトでは未知の値はそのまま保持されます。',
-		'INT'			=> '整数値。例: <samp>2</samp>。',
-		'IP'			=> '有効な IPv4 または IPv6 アドレス。',
-		'IPPORT'		=> 'ポート番号付きの有効な IPv4 または IPv6 アドレス。',
-		'IPV4'			=> '有効な IPv4 アドレス。',
-		'IPV6'			=> '有効な IPv6 アドレス。',
-		'MAP'			=> '文字列を置換マッピングする型。形式: <samp>{MAP=string1:replacement1,string2:replacement2}</samp> 大文字小文字を区別しません。デフォルトでは未知の値はそのまま保持されます。',
-		'RANGE'			=> '指定範囲内の整数値を受け付けます。例: <samp>{RANGE=-10,42}</samp>。',
-		'REGEXP'		=> '指定された正規表現で値を検証します。例: <samp>{REGEXP=/^foo\w+bar$/}</samp>。',
-		'TIMESTAMP'		=> '<samp>1h30m10s</samp> のようなタイムスタンプ表記を秒数に変換します。数値も受け付けます。',
-		'UINT'			=> '符号なし整数値。<samp>{INT}</samp> と同じですが、0 未満の値は拒否されます。',
-	),
+		'COLOR'			=> 'HTMLカラー。<samp>#FF1234</samp> のような数値形式か、 <samp>fuchsia</samp> または <samp>InactiveBorder</samp> のような <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">CSSカラーキーワード</a> です。 '
+	)
 ));
 
 // Smilies and topic icons
@@ -138,9 +124,9 @@ $lang = array_merge($lang, array(
 	'EDIT_SMILIES'				=> 'スマイリーの編集',
 	'EMOTION'					=> '意味',
 	'EXPORT_ICONS'				=> 'icons.pak のエクスポート &amp; ダウンロード',
-	'EXPORT_ICONS_EXPLAIN'		=> '%sこのリンクをクリックすると、インストール済みアイコンの設定が <samp>icons.pak</samp> としてパッケージ化されます。これをダウンロードすれば、すべてのアイコンと <samp>icons.pak</samp> 設定ファイルを含む <samp>.zip</samp> または <samp>.tgz</samp> ファイルを作成できます%s。',
+	'EXPORT_ICONS_EXPLAIN'		=> '%sこちらをクリックするとアイコンパックファイル <samp>icons.pak</samp> のダウンロードが開始されます。アイコンパックファイル <samp>icons.pak</samp> を images/icons ディレクトリにアップロードするとアイコンパックをインストールできるようになります。%s',
 	'EXPORT_SMILIES'			=> 'smilies.pak のエクスポート &amp; ダウンロード',
-	'EXPORT_SMILIES_EXPLAIN'	=> '%sこのリンクをクリックすると、インストール済みスマイリーの設定が <samp>smilies.pak</samp> としてパッケージ化されます。これをダウンロードすれば、すべてのスマイリーと <samp>smilies.pak</samp> 設定ファイルを含む <samp>.zip</samp> または <samp>.tgz</samp> ファイルを作成できます%s。',
+	'EXPORT_SMILIES_EXPLAIN'	=> '%sこちらをクリックするとスマイリーパックファイル <samp>smilies.pak</samp> のダウンロードが開始されます。スマイリーパックファイル <samp>smilies.pak</samp> を images/smilies ディレクトリにアップロードするとスマイリーパックをインストールできるようになります。%s',
 
 	'FIRST'			=> 'First',
 
@@ -148,7 +134,6 @@ $lang = array_merge($lang, array(
 	'ICONS_ADDED'			=> array(
 		0	=> 'アイコンは追加されませんでした',
 		1	=> 'アイコンの追加に成功しました',
-		2	=> 'アイコンの追加に成功しました',
 	),
 	'ICONS_CONFIG'			=> 'アイコン設定',
 	'ICONS_DELETED'			=> 'アイコンの削除に成功しました',
@@ -156,7 +141,6 @@ $lang = array_merge($lang, array(
 	'ICONS_EDITED'			=> array(
 		0	=> 'アイコンは更新されませんでした',
 		1	=> 'アイコンの更新に成功しました',
-		2	=> 'アイコンの更新に成功しました',
 	),
 	'ICONS_HEIGHT'			=> '画像の高さ (pix)',
 	'ICONS_IMAGE'			=> 'アイコン画像',
@@ -192,7 +176,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_ADDED'				=> array(
 		0	=> 'スマイリーは追加されませんでした',
 		1	=> 'スマイリーの追加に成功しました',
-		2	=> 'スマイリーの追加に成功しました',
 	),
 	'SMILIES_CODE'				=> 'スマイリーコード',
 	'SMILIES_CONFIG'			=> 'スマイリー設定',
@@ -201,7 +184,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_EDITED'			=> array(
 		0	=> 'スマイリーは更新されませんでした',
 		1	=> 'スマイリーの更新に成功しました',
-		2	=> 'スマイリーの更新に成功しました',
 	),
 	'SMILIE_NO_CODE'			=> 'コードが未入力だったため、スマイリー “%s” は無視されました',
 	'SMILIE_NO_EMOTION'			=> '意味が未入力だったため、スマイリー “%s” は無視されました',
@@ -219,7 +201,6 @@ $lang = array_merge($lang, array(
 
 	'TOO_MANY_SMILIES'			=> array(
 		1	=> 'スマイリーが最大数 %d に達しています',
-		2	=> 'スマイリーが最大数 %d に達しています',
 	),
 
 	'WRONG_PAK_TYPE'	=> '指定したパック内のデータが適切なデータではありません',
