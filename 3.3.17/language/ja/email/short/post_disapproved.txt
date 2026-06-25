@@ -1,10 +1,13 @@
-Subject: Post disapproved - "{POST_SUBJECT}"
+Subject: 投稿記事が却下されました - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-Your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+フォーラムサイト "{SITENAME}" に於いて
+あなたが投稿した記事 "{POST_SUBJECT}" は
 
-The following reason was given for the disapproval:
+モデレータまたはフォーラムサイト管理人によって却下されました。
+
+却下された理由を確認するにはこちらをクリックしてください：
 
 {REASON}
 

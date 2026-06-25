@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* acp_ban [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -38,47 +42,48 @@ if (empty($lang) || !is_array($lang))
 
 // Banning
 $lang = array_merge($lang, array(
-	'1_HOUR'		=> '1 hour',
-	'30_MINS'		=> '30 minutes',
-	'6_HOURS'		=> '6 hours',
 
-	'ACP_BAN_EXPLAIN'	=> 'Here you can control the banning of users by name, IP or email address. These methods prevent a user reaching any part of the board. You can give a short (maximum 3000 characters) reason for the ban if you wish. This will be displayed in the admin log. The duration of a ban can also be specified. If you want the ban to end on a specific date rather than after a set time period select <span style="text-decoration: underline;">Until -&gt;</span> for the ban length and enter a date in <kbd>YYYY-MM-DD</kbd> format.',
+	'1_HOUR'		=> '1 時間',
+	'30_MINS'		=> '30 分',
+	'6_HOURS'		=> '6 時間',
 
-	'BAN_EXCLUDE'			=> 'Exclude from banning',
-	'BAN_LENGTH'			=> 'Length of ban',
-	'BAN_REASON'			=> 'Reason for ban',
-	'BAN_GIVE_REASON'		=> 'Reason shown to the banned',
-	'BAN_UPDATE_SUCCESSFUL'	=> 'The banlist has been updated successfully.',
-	'BANNED_UNTIL_DATE'		=> 'until %s', // Example: "until Mon 13.Jul.2009, 14:44"
-	'BANNED_UNTIL_DURATION'	=> '%1$s (until %2$s)', // Example: "7 days (until Tue 14.Jul.2009, 14:44)"
+	'ACP_BAN_EXPLAIN'	=> 'ここではユーザー名、IPアドレス、メールアドレスを用いてユーザーのアクセスを禁止できます。アクセス禁止されたユーザーは掲示板にアクセスできなくなります。アクセス禁止したユーザー名、IPアドレス、メールアドレスそれぞれに対してアクセス禁止した理由 （最大３０００字） をメモしておく事が可能です。このメモは Adminログ で表示されます。アクセス禁止の期限を指定することも可能です。もしアクセス禁止期限を特定の年月日に指定したい場合、 <span style="text-decoration: underline;">期限指定 -&gt;</span> を選択して <kbd>YYYY-MM-DD</kbd> 形式で年月日を入力してください。 ',
 
-	'EMAIL_BAN'					=> 'Ban one or more email addresses',
-	'EMAIL_BAN_EXCLUDE_EXPLAIN'	=> 'Enable this to exclude the entered email address from all current bans.',
-	'EMAIL_BAN_EXPLAIN'			=> 'To specify more than one email address enter each on a new line. To match partial addresses use * as the wildcard, e.g. <samp>*@hotmail.com</samp>, <samp>*@*.domain.tld</samp>, etc.',
-	'EMAIL_NO_BANNED'			=> 'No banned email addresses',
-	'EMAIL_UNBAN'				=> 'Un-ban or un-exclude emails',
-	'EMAIL_UNBAN_EXPLAIN'		=> 'You can unban (or un-exclude) multiple email addresses in one go using the appropriate combination of mouse and keyboard for your computer and browser. Excluded email addresses are emphasised.',
+	'BAN_EXCLUDE'			=> '例外モード',
+	'BAN_LENGTH'			=> 'アクセス禁止の期限',
+	'BAN_REASON'			=> 'アクセス禁止の理由 （Adminログ に表示されます）',
+	'BAN_GIVE_REASON'		=> 'アクセス禁止の理由 （アクセス禁止されたユーザーに対して表示されます）',
+	'BAN_UPDATE_SUCCESSFUL'		=> 'アクセス禁止リストの更新に成功しました',
+	'BANNED_UNTIL_DATE'		=> '%s まで', // Example: "until Mon 13.Jul.2009, 14:44"
+	'BANNED_UNTIL_DURATION'		=> '%1$s (%2$s まで)', // Example: "7 days (until Tue 14.Jul.2009, 14:44)"
 
-	'IP_BAN'					=> 'Ban one or more IPs',
-	'IP_BAN_EXCLUDE_EXPLAIN'	=> 'Enable this to exclude the entered IP from all current bans.',
-	'IP_BAN_EXPLAIN'			=> 'To specify several different IPs or hostnames enter each on a new line. To specify a range of IP addresses separate the start and end with a hyphen (-), to specify a wildcard use “*”.',
-	'IP_HOSTNAME'				=> 'IP addresses or hostnames',
-	'IP_NO_BANNED'				=> 'No banned IP addresses',
-	'IP_UNBAN'					=> 'Un-ban or un-exclude IPs',
-	'IP_UNBAN_EXPLAIN'			=> 'You can unban (or un-exclude) multiple IP addresses in one go using the appropriate combination of mouse and keyboard for your computer and browser. Excluded IPs are emphasised.',
+	'EMAIL_BAN'			=> 'メールアドレスによるアクセス禁止',
+	'EMAIL_BAN_EXCLUDE_EXPLAIN'	=> '例外として追加されたメールアドレスはアクセス禁止リストの有効範囲から除外されます',
+	'EMAIL_BAN_EXPLAIN'		=> '１行につき１つのメールアドレスを入力してください。部分一致としてワイルドカード(*)を使用できます (<samp>*@hotmail.com</samp>, <samp>*@*.domain.tld</samp> など）',
+	'EMAIL_NO_BANNED'		=> 'アクセス禁止されているメールアドレスはありません',
+	'EMAIL_UNBAN'			=> 'アクセス禁止の解除 - メールアドレス',
+	'EMAIL_UNBAN_EXPLAIN'		=> '複数のメールアドレスを削除（または除外）するにはマウスとキーボードをうまく活用してください (SHIFTキー または CTRLキー を押しながらクリック)。除外されたメールアドレスは強調表示されます。',
+	'IP_BAN'			=> 'IPアドレス によるアクセス禁止',
+	'IP_BAN_EXCLUDE_EXPLAIN'	=> '例外として追加された IPアドレス はアクセス禁止の有効範囲から除外されます',
+	'IP_BAN_EXPLAIN'		=> '１行につき１つの IPアドレス/ホスト名 を入力してください。IPアドレス を範囲指定する場合、IPアドレス と IPアドレス  をハイフン(-)で繋いでください。部分一致としてワイルドカード(*)を使用できます',
+	'IP_HOSTNAME'			=> 'IPアドレス または ホスト名',
+	'IP_NO_BANNED'			=> 'アクセス禁止されている IPアドレス はありません',
+	'IP_UNBAN'			=> 'アクセス禁止の解除 - IPアドレス',
+	'IP_UNBAN_EXPLAIN'		=> '複数のIPアドレスを一度に禁止解除（または除外解除）するにはマウスとキーボードをうまく活用してください （SHIFTキー または CTRLキー を押しながらクリック）。除外されたIPアドレスは強調表示されます。',
 
-	'LENGTH_BAN_INVALID'		=> 'The date has to be formatted <kbd>YYYY-MM-DD</kbd>.',
+	'LENGTH_BAN_INVALID'		=> '日付フォーマットは <kbd>YYYY-MM-DD</kbd> である必要があります',
 
-	'OPTIONS_BANNED'			=> 'Banned',
-	'OPTIONS_EXCLUDED'			=> 'Excluded',
+	'OPTIONS_BANNED'		=> 'アクセス禁止',
+	'OPTIONS_EXCLUDED'		=> '例外モード',
 
-	'PERMANENT'		=> 'Permanent',
+	'PERMANENT'			=> '期限なし',
 
-	'UNTIL'						=> 'Until',
-	'USER_BAN'					=> 'Ban one or more users by username',
-	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Enable this to exclude the entered users from all current bans.',
-	'USER_BAN_EXPLAIN'			=> 'You can ban multiple users in one go by entering each name on a new line. Use the <span style="text-decoration: underline;">Find a member</span> facility to look up and add one or more users automatically.',
-	'USER_NO_BANNED'			=> 'No banned usernames',
-	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
-	'USER_UNBAN_EXPLAIN'		=> 'You can unban (or un-exclude) multiple users in one go using the appropriate combination of mouse and keyboard for your computer and browser. Excluded users are emphasised.',
+	'UNTIL'				=> '期限指定',
+	'USER_BAN'			=> 'ユーザー名によるアクセス禁止',
+	'USER_BAN_EXCLUDE_EXPLAIN'	=> '例外として追加されたユーザー名はアクセス禁止リストから除外されます',
+	'USER_BAN_EXPLAIN'		=> '１行につき１つのユーザー名を入力してください。<span style="text-decoration: underline;">ユーザー検索</span>を活用すると良いでしょう。',
+	'USER_NO_BANNED'		=> 'アクセス禁止されているユーザー名はありません',
+	'USER_UNBAN'			=> 'アクセス禁止の解除 - ユーザー名',
+	'USER_UNBAN_EXPLAIN'		=> '複数のユーザーを一度に禁止解除（または除外解除）するにはマウスとキーボードをうまく活用してください （SHIFTキー または CTRLキー を押しながらクリック）。除外されたユーザーは強調表示されます。',
+
 ));

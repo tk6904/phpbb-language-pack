@@ -1,13 +1,12 @@
 <?php
 /**
 *
-* This file is part of the phpBB Forum Software package.
+* groups [Japanese]
 *
-* @copyright (c) phpBB Limited <https://www.phpbb.com>
-* @license GNU General Public License, version 2 (GPL-2.0)
-*
-* For full copyright and license information, please see
-* the docs/CREDITS.txt file.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
@@ -37,59 +36,59 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ALREADY_DEFAULT_GROUP'		=> 'The selected group is already your default group.',
-	'ALREADY_IN_GROUP'			=> 'You are already a member of the selected group.',
-	'ALREADY_IN_GROUP_PENDING'	=> 'You already requested joining the selected group.',
+	'ALREADY_DEFAULT_GROUP'		=> '選択したグループは既にデフォルトグループに設定されています',
+	'ALREADY_IN_GROUP'		=> '選択したグループへ既にメンバーとして参加しています',
+	'ALREADY_IN_GROUP_PENDING'	=> '選択したグループへの参加を既に申請済みです',
 
-	'CANNOT_JOIN_GROUP'			=> 'You are not able to join this group. You are only able to join open and freely open groups.',
-	'CANNOT_RESIGN_GROUP'		=> 'You are not able to resign from this group. You are only able to resign from open and freely open groups.',
-	'CHANGED_DEFAULT_GROUP'		=> 'Successfully changed default group.',
+	'CANNOT_JOIN_GROUP'		=> 'このグループに参加することはできません。参加できるグループは開放グループと申請グループのみです。',
+	'CANNOT_RESIGN_GROUP'		=> 'このグループから脱退することはできません。脱退できるグループは開放グループと申請グループのみです。',
+	'CHANGED_DEFAULT_GROUP'		=> 'デフォルトグループの変更に成功しました',
+	
+	'GROUP_AVATAR'			=> 'グループアバター',
+	'GROUP_CHANGE_DEFAULT'		=> 'デフォルトグループを “%s” に変更してもよろしいですか？',
+	'GROUP_CLOSED'			=> '閉鎖グループ',
+	'GROUP_DESC'			=> 'グループ説明',
+	'GROUP_HIDDEN'			=> '非公開グループ',
+	'GROUP_INFORMATION'		=> 'グループ情報',
+	'GROUP_IS_CLOSED'		=> 'このグループは閉鎖グループです。メンバーの追加はグループリーダーが行います。',
+	'GROUP_IS_FREE'			=> 'このグループは開放グループです。登録ユーザーならどなたでも参加できます。',
+	'GROUP_IS_HIDDEN'		=> 'このグループは非公開グループです。グループメンバーにのみ表示されます。',
+	'GROUP_IS_OPEN'			=> 'このグループは申請グループです。登録ユーザーならどなたでも参加を申請できます。',
+	'GROUP_IS_SPECIAL'		=> 'このグループは特別グループです。管理人が管理しています。',
+	'GROUP_JOIN'			=> 'グループへ参加',
+	'GROUP_JOIN_CONFIRM'		=> '選択したグループへ本当に参加してもよろしいですか？',
+	'GROUP_JOIN_PENDING'		=> 'グループ参加の申請',
+	'GROUP_JOIN_PENDING_CONFIRM'	=> '選択したグループへの参加を本当に申請してもよろしいですか？',
+	'GROUP_JOINED'						=> '選択したグループへの参加に成功しました',
+	'GROUP_JOINED_PENDING'				=> 'グループ参加の申請に成功しました。グループリーダーから承認されるまでお待ちください。',
+	'GROUP_LIST'						=> 'ユーザー管理',
+	'GROUP_MEMBERS'						=> 'グループメンバー',
+	'GROUP_NAME'						=> 'グループ名',
+	'GROUP_OPEN'						=> '開放',
+	'GROUP_RANK'						=> 'グループランク',
+	'GROUP_RESIGN_MEMBERSHIP'			=> 'グループからの脱退',
+	'GROUP_RESIGN_MEMBERSHIP_CONFIRM'	=> '選択したグループから本当に脱退してもよろしいですか？',
+	'GROUP_RESIGN_PENDING'				=> 'グループ参加申請のキャンセル',
+	'GROUP_RESIGN_PENDING_CONFIRM'		=> '選択したグループへの参加申請を本当にキャンセルしてもよろしいですか？',
+	'GROUP_RESIGNED_MEMBERSHIP'			=> '選択したグループからの脱退に成功しました',
+	'GROUP_RESIGNED_PENDING'			=> '選択したグループへの参加申請のキャンセルに成功しました',
+	'GROUP_TYPE'					=> 'グループタイプ',
+	'GROUP_UNDISCLOSED'				=> '非公開グループ',
+	'FORUM_UNDISCLOSED'				=> '非公開フォーラムをモデレート中',
 
-	'GROUP_AVATAR'						=> 'Group avatar',
-	'GROUP_CHANGE_DEFAULT'				=> 'Are you sure you want to change your default membership to the group “%s”?',
-	'GROUP_CLOSED'						=> 'Closed',
-	'GROUP_DESC'						=> 'Group description',
-	'GROUP_HIDDEN'						=> 'Hidden',
-	'GROUP_INFORMATION'					=> 'Usergroup information',
-	'GROUP_IS_CLOSED'					=> 'This is a closed group, new members can only join upon invitation of a group leader.',
-	'GROUP_IS_FREE'						=> 'This is a freely open group, all new members are welcome.',
-	'GROUP_IS_HIDDEN'					=> 'This is a hidden group, only members of this group can view its membership.',
-	'GROUP_IS_OPEN'						=> 'This is an open group, members can apply to join.',
-	'GROUP_IS_SPECIAL'					=> 'This is a special group, special groups are managed by the board administrators.',
-	'GROUP_JOIN'						=> 'Join group',
-	'GROUP_JOIN_CONFIRM'				=> 'Are you sure you want to join the selected group?',
-	'GROUP_JOIN_PENDING'				=> 'Request to join group',
-	'GROUP_JOIN_PENDING_CONFIRM'		=> 'Are you sure you want to request joining the selected group?',
-	'GROUP_JOINED'						=> 'Successfully joined selected group.',
-	'GROUP_JOINED_PENDING'				=> 'Successfully requested group membership. Please wait for a group leader to approve your membership.',
-	'GROUP_LIST'						=> 'Manage users',
-	'GROUP_MEMBERS'						=> 'Group members',
-	'GROUP_NAME'						=> 'Group name',
-	'GROUP_OPEN'						=> 'Open',
-	'GROUP_RANK'						=> 'Group rank',
-	'GROUP_RESIGN_MEMBERSHIP'			=> 'Resign group membership',
-	'GROUP_RESIGN_MEMBERSHIP_CONFIRM'	=> 'Are you sure you want to resign your membership from the selected group?',
-	'GROUP_RESIGN_PENDING'				=> 'Resign a pending group membership',
-	'GROUP_RESIGN_PENDING_CONFIRM'		=> 'Are you sure you want to resign your pending membership from the selected group?',
-	'GROUP_RESIGNED_MEMBERSHIP'			=> 'You were successfully removed from the selected group.',
-	'GROUP_RESIGNED_PENDING'			=> 'Your pending membership was successfully removed from the selected group.',
-	'GROUP_TYPE'						=> 'Group type',
-	'GROUP_UNDISCLOSED'					=> 'Hidden group',
-	'FORUM_UNDISCLOSED'					=> 'Moderating hidden forum(s)',
+	'LOGIN_EXPLAIN_GROUP'		=> 'グループの詳細を閲覧するにはログインが必要です',
 
-	'LOGIN_EXPLAIN_GROUP'	=> 'You need to login to view group details.',
+	'NO_LEADERS'			=> 'あなたがリーダーを務めるグループはありません',
+	'NOT_LEADER_OF_GROUP'		=> 'グループリーダーではないため、そのオペレーションを実行することはできません',
+	'NOT_MEMBER_OF_GROUP'		=> 'グループメンバーではないため、そのオペレーションを実行することはできません',
+	'NOT_RESIGN_FROM_DEFAULT_GROUP'	=> 'デフォルトグループを変更するにはパーミッションが必要です',
+	
+	'PRIMARY_GROUP'		=> 'プライマリグループ',
 
-	'NO_LEADERS'					=> 'You are not a leader of any group.',
-	'NOT_LEADER_OF_GROUP'			=> 'The requested operation cannot be taken because you are not a leader of the selected group.',
-	'NOT_MEMBER_OF_GROUP'			=> 'The requested operation cannot be taken because you are not a member of the selected group or your membership has not been approved yet.',
-	'NOT_RESIGN_FROM_DEFAULT_GROUP'	=> 'You are not allowed to resign from your default group.',
+	'REMOVE_SELECTED'		=> '削除',
 
-	'PRIMARY_GROUP'		=> 'Primary group',
-
-	'REMOVE_SELECTED'		=> 'Remove selected',
-
-	'USER_GROUP_CHANGE'			=> 'From “%1$s” group to “%2$s”',
-	'USER_GROUP_DEMOTE'			=> 'Demote leadership',
-	'USER_GROUP_DEMOTE_CONFIRM'	=> 'Are you sure you want to demote as group leader from the selected group?',
-	'USER_GROUP_DEMOTED'		=> 'Successfully demoted your leadership.',
+	'USER_GROUP_CHANGE'		=> 'グループ “%1$s” からグループ “%2$s” へ',
+	'USER_GROUP_DEMOTE'		=> 'グループリーダーを辞任する',
+	'USER_GROUP_DEMOTE_CONFIRM'	=> '選択したグループのリーダーを本当に辞任してもよろしいですか？',
+	'USER_GROUP_DEMOTED'		=> 'グループリーダーの辞任に成功しました',
 ));

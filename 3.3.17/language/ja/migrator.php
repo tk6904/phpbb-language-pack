@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* migrator [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -37,46 +41,46 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+	'CONFIG_NOT_EXIST'					=> '環境設定 "%s" は存在しません',
 
-	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+	'GROUP_NOT_EXIST'					=> 'グループ "%s" は存在しません',
 
-	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
-	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
-	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
-	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
-	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
-	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
-	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
-	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
-	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
-	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
-	'MIGRATION_SCHEMA_IN_PROGRESS'		=> 'Installing Schema: %1$s; Time: %2$.2f seconds',
-	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+	'MIGRATION_APPLY_DEPENDENCIES'		=> ' %s の Dependencies を適用します',
+	'MIGRATION_DATA_DONE'				=> 'データをインストールしました: %1$s; 時間: %2$.2f 秒',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'データをインストール中: %1$s; 時間: %2$.2f 秒',
+	'MIGRATION_DATA_RUNNING'			=> 'データをインストール中: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'マイグレーションは有効にインストールされています (スキップしました): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'リクエスト中に問題が生じ、例外処理が発生しました。変更は出来うる限りエラー発生前の状態に戻しましたが、エラーが発生していないか念のため掲示板をチェックしてください。',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'マイグレーション "%1$s" が完了していません。未完了のマイグレーション： "%2$s"',
+	'MIGRATION_NOT_INSTALLED'			=> 'マイグレーション "%s" が完了しませんでした',
+	'MIGRATION_NOT_VALID'				=> '%s は不明なマイグレーションです',
+	'MIGRATION_SCHEMA_DONE'				=> 'スキーマのインストールを完了しました: %1$s; 時間: %2$.2f 秒',
+	'MIGRATION_SCHEMA_IN_PROGRESS'			=> 'スキーマをインストール中: %1$s; 時間: %2$.2f 秒',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'スキーマをインストール中: %s.',
 
-	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
-	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
-	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
-	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
-	'MIGRATION_REVERT_SCHEMA_IN_PROGRESS'	=> 'Reverting Schema: %1$s; Time: %2$.2f seconds',
-	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+	'MIGRATION_REVERT_DATA_DONE'		=> 'データを元に戻しました: %1$s; 時間: %2$.2f 秒',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'データを元に戻しています: %1$s; 時間: %2$.2f 秒',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'データを元に戻しています: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'スキーマを元に戻しました: %1$s; 時間: %2$.2f 秒',
+	'MIGRATION_REVERT_SCHEMA_IN_PROGRESS'	=> 'スキーマを元に戻しています: %1$s; 時間: %2$.2f 秒',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'スキーマを元に戻しています: %s.',
 
-	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
-	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
-	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
-	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
-	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
-	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> '無効なマイグレーションです。if ステートメントヘルパーが条件を取得できていません。',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> '無効なマイグレーションです。if ステートメントヘルパーがマイグレーションステップへの有効な呼び出しを取得していません。',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'		=> '無効なマイグレーションです。カスタム呼び出し機能が呼び出されませんでした',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> '無効なマイグレーションです。不明な移行ツールタイプに遭遇しました。',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> '無効なマイグレーションです。未定義の移行ツールに遭遇しました',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> '無効なマイグレーションです。未定義の移行ツールメソッドに遭遇しました。',
 
-	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
-	'MODULE_EXISTS'						=> 'A module already exists: %s',
-	'MODULE_EXIST_MULTIPLE'				=> 'Several modules with the given parent module langname already exist: %s. Try using before/after keys to clarify the module placement.',
-	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
-	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+	'MODULE_ERROR'						=> 'モジュール作成中にエラーが発生しました: %s',
+	'MODULE_EXISTS'						=> 'モジュールはすでに存在しています: %s',
+	'MODULE_EXIST_MULTIPLE'				=> '親モジュールの言語名を与えるいくつかのモジュールがすでに存在しています: %s モジュール置換状況を確かめるために before/after キーを試してみてください。',
+	'MODULE_INFO_FILE_NOT_EXIST'			=> '必要なモジュール情報ファイルが見つかりません: %2$s',
+	'MODULE_NOT_EXIST'				=> '必要なモジュールが存在していません: %s',
 
-	'PARENT_MODULE_FIND_ERROR'			=> 'Unable to determine the parent module identifier: %s',
-	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+	'PARENT_MODULE_FIND_ERROR'			=> '親モジュールの識別子が判定できません。: %s',
+	'PERMISSION_NOT_EXIST'				=> 'パーミッション設定 "%s" が存在しません',
 
-	'ROLE_ASSIGNED_NOT_EXIST'			=> 'The permission role assigned to group "%1$s" unexpectedly does not exist. Role id: "%2$s"',
-	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+	'ROLE_ASSIGNED_NOT_EXIST'			=> 'グループ "%1$s" に割り当てられたパーミッションセットが存在しません。セット ID: "%2$s"',
+	'ROLE_NOT_EXIST'					=> 'パーミッションセット "%s" が存在しません',
 ));

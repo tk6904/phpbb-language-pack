@@ -1,13 +1,17 @@
-Subject: Quoted in "{TOPIC_TITLE}"
+Subject: 引用つき返信記事の通知 - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-"{AUTHOR_NAME}" quoted you in the topic "{TOPIC_TITLE}" at "{SITENAME}".
+フォーラムサイト "{SITENAME}" に於いて
+トピック "{TOPIC_TITLE}" に
 
-If you want to view the quoted post, click the following link:
+{AUTHOR_NAME} さんがあなたの記事を引用して
+返信記事を投稿しました。
+
+記事を確認したい場合はこちらのリンクをクリックしてください：
 {U_VIEW_POST}
 
-If you no longer wish to receive updates about replies quoting you, please update your notification settings here:
+新着記事の通知メールを停止したい場合、通知設定を更新してください：
 {U_NOTIFICATION_SETTINGS}
 
 {EMAIL_SIG}

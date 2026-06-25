@@ -1,42 +1,49 @@
-Subject: Welcome to "{SITENAME}"
+Subject: フォーラムサイト "{SITENAME}" へようこそ
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+アメリカ合衆国において施行されている COPPA（児童オンラインプライバシー保護法） に準拠し、あなたのアカウントを無効にしています。
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+アカウントを有効化するには、
+先ずこのメールを印刷してあなたの両親または保護者にサインと日付を記入してもらい、
+次にその用紙を下記 FAX 番号へ送信する必要があります：
 
 {FAX_INFO}
 
-OR mail it to:
+もしくは下記住所へ郵送してください：
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ 切り取り ----------------------------------------
+私は私の子供がフォーラムサイト "{SITENAME}" へ参加する事を認めます - {U_BOARD}
 
-Username: {USERNAME}
-Email: {EMAIL_ADDRESS}
+ユーザー名： {USERNAME}
+メールアドレス： {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+私は私の子供がインターネットで上記プライベート情報をあなたのサイトへ送信した事を確認しました。
+その上でこの情報がフォーラムサイト "{SITENAME}" で保管される事を認めます。
+パスワードを入力しさえすればいつでもこの情報を変更できる事を私は理解しています。
+フォーラムサイト "{SITENAME}" で保管されているこの情報の削除を、
+私はいつでもフォーラムサイト "{SITENAME}" に対し要求できる事を私は理解しています。 
 
+両親または保護者へ
+( あなたのお名前 ): _____________________
 
-Parent or guardian 
-(print your name here): _____________________
+( サイン ): __________________ 
 
-(sign here): __________________ 
+日付: _______________
 
-Date: _______________
+------------------------------ 切り取り -----------------------------------------
 
------------------------------- CUT HERE ------------------------------
+サインが済み次第、上記用紙を FAX または郵便でお送りください。
+フォーラムサイト管理人が受け取り次第、アカウントを有効化いたします。
 
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
+ユーザー登録して頂きありがとうございました。
 
 {EMAIL_SIG}

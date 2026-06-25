@@ -1,9 +1,14 @@
-Subject: A request to join your group has been made
+Subject: グループ参加の申請があります
 
-Dear {USERNAME},
+{USERNAME} さん
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+フォーラムサイト "{SITENAME}" に於いて
+ユーザー "{REQUEST_USERNAME}" さんが
+あなたの管理するグループ "{GROUP_NAME}"
+
+に参加を申請しました。
+
+申請を承認または却下するにはこちらをクリックしてください：
 
 {U_PENDING}
 

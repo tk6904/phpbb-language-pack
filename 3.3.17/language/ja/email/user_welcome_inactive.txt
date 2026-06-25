@@ -1,21 +1,24 @@
-Subject: Welcome to "{SITENAME}"
+Subject: フォーラムサイト "{SITENAME}" へようこそ - {U_BOARD}
 
 {WELCOME_MSG}
 
-Please keep this email for your records. Your account information is as follows:
+このメールは大切に保管してください。
+あなたのアカウント情報はこちらです：
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+ユーザー名： {USERNAME}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+こちらをクリックしてアカウントを有効化してください：
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
-Thank you for registering.
+ご登録ありがとうございました。
 
 {EMAIL_SIG}

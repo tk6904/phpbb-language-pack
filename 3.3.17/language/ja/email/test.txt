@@ -1,13 +1,15 @@
-Subject: phpBB is correctly configured to send emails
+Subject: phpBB にメール送信設定が正しくセットされました
 
-Hello {USERNAME},
+{USERNAME} さん
 
-Congratulations. If you received this email, phpBB is correctly configured to send emails.
+おめでとうございます。もしこのメールを受け取っていれば, phpBB のメール送信設定は正しくセットされたことになります。
 
 <!-- IF MESSAGE -->
 {MESSAGE}
 
 <!-- ENDIF -->
-In case you require assistance, please visit the phpBB support forums - https://www.phpbb.com/community/
+もしサポートが必要な場合は、
+BB support forums - https://www.phpbb.com/community/
+にてお問い合わせください。
 
 {EMAIL_SIG}

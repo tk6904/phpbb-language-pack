@@ -1,7 +1,11 @@
-Subject: Your account has been deactivated
+Subject: アカウントが無効化されました
 
-Hello {USERNAME},
+{USERNAME} さん
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
+フォーラムサイト "{SITENAME}" に於いて
+あなたのプロフィール情報が変更されたため、あなたのアカウントを一時的に無効化しました。
+
+ログインするにはフォーラムサイト管理人がアカウントを有効化する必要があります。
+アカウントが有効化され次第、その旨の通知メールがこのメールアドレスに送信されます。
 
 {EMAIL_SIG}

@@ -1,8 +1,11 @@
-Subject: Reactivate your account
+Subject: アカウントを有効化してください
 
-Hello {USERNAME},
+{USERNAME} さん
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
+フォーラムサイト "{SITENAME}" に於いて
+あなたのプロフィール情報が変更されたため、あなたのアカウントを一時的に無効化しました。
+
+こちらをクリックしてアカウントを有効化してください：
 
 {U_ACTIVATE}
 

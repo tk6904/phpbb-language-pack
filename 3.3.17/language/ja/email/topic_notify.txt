@@ -1,20 +1,25 @@
-Subject: Reply in "{TOPIC_TITLE}"
-List-Unsubscribe: <{U_STOP_WATCHING_TOPIC}>
+Subject: 新着記事の通知 - トピック "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-The topic "{TOPIC_TITLE}" received a new reply<!-- IF AUTHOR_NAME != '' --> by {AUTHOR_NAME}<!-- ENDIF --> since your last visit to "{SITENAME}". No more emails will be sent until you visit the topic.
+フォーラムサイト "{SITENAME}" に於いて
+トピック "{TOPIC_TITLE}"<!-- IF AUTHOR_NAME !== '' --> by {AUTHOR_NAME}<!-- ENDIF -->
 
-If you want to view the newest post click the following link:
+に返信記事が投稿されました。
+
+これはあなたが最後にトピックを見た日時より後に返信されたものです。
+トピックを見るまでトピックに新しい返信記事が投稿されても通知される事はありません。
+
+新着記事を確認するにはこちらをクリックしてください：
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+トピックを確認するにはこちらをクリックしてください：
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+フォーラムを確認するにはこちらをクリックしてください：
 {U_FORUM}
 
-If you no longer wish to watch this topic click the following link:
+新着記事の通知メールを停止したい場合はこちらをクリックしてください：
 {U_STOP_WATCHING_TOPIC}
 
 {EMAIL_SIG}

@@ -35,100 +35,100 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'EXTENSION'					=> 'Extension',
-	'EXTENSIONS'				=> 'Extensions',
-	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
-	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
-	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
-	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
-	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
-	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
-	'EXTENSION_NOT_INSTALLED'	=> 'The extension %s is not available. Please check that you have installed it correctly.',
+	'EXTENSION'			=> '拡張モジュール',
+	'EXTENSIONS'			=> '拡張モジュール',
+	'EXTENSIONS_ADMIN'		=> '拡張モジュールの管理（Extension Manager）',
+	'EXTENSIONS_EXPLAIN'		=> '拡張モジュールマネージャ（Extension Manager）はあなたのphpBBの中の全ての拡張モジュールのステータスを管理し、その情報を閲覧するツールです。',
+	'EXTENSION_INVALID_LIST'	=> '拡張モジュール “%s” が有効ではありません<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> '選択した拡張モジュールは利用可能ではありません。phpBBソフトウェアとPHP バージョンが動作を許可しているか検証してください。 (詳細ページを参照してください)。',
+	'EXTENSION_DIR_INVALID'		=> '選択した拡張モジュールは有効でないディレクトリに構築されており、有効化できません。',
+	'EXTENSION_NOT_ENABLEABLE'	=> '選択した拡張モジュールは有効化できません。モジュールの動作条件を検証してください。',
+	'EXTENSION_NOT_INSTALLED'	=> '拡張モジュール %s は利用出来ません。正しくインストールされているかどうか確認してください。',
 
-	'DETAILS'				=> 'Details',
+	'DETAILS'			=> '詳細',
 
-	'EXTENSIONS_NOT_INSTALLED'	=> 'Not installed Extensions',
-	'EXTENSIONS_DISABLED'		=> 'Disabled Extensions',
-	'EXTENSIONS_ENABLED'		=> 'Enabled Extensions',
+	'EXTENSIONS_NOT_INSTALLED'	=> 'インストールされていない拡張モジュール',
+	'EXTENSIONS_DISABLED'		=> '非表示の拡張モジュール',
+	'EXTENSIONS_ENABLED'		=> '拡張モジュールの有効化',
 
-	'EXTENSION_DELETE_DATA'	=> 'Delete data',
-	'EXTENSION_DISABLE'		=> 'Disable',
-	'EXTENSION_ENABLE'		=> 'Enable',
+	'EXTENSION_DELETE_DATA'		=> '削除',
+	'EXTENSION_DISABLE'		=> '停止',
+	'EXTENSION_ENABLE'		=> '有効化',
 
-	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
-	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
-	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> '拡張モジュールのデータ・設定の全てを削除しますが、拡張モジュールファイルは保持されており、再度有効化できます。',
+	'EXTENSION_DISABLE_EXPLAIN'	=> '拡張モジュールを停止すると、そのファイル、データ、設定自体は保持されますが、モジュールに備わった機能自体は使えなくなります。',
+	'EXTENSION_ENABLE_EXPLAIN'	=> '拡張モジュールを有効化すると、掲示板上でモジュールを使えるようになります。',
 
-	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
-	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
-	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> '拡張モジュールのデータを削除中です。完了するまでページを移動・リフレッシュしないでください。',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> '拡張モジュールを停止中です。完了するまでページを移動・リフレッシュしないでください。',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> '拡張モジュールを有効化中です。完了するまでページを移動・リフレッシュしないでください。',
 
-	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
-	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
-	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+	'EXTENSION_DELETE_DATA_SUCCESS'		=> '拡張モジュールのデータを削除しました',
+	'EXTENSION_DISABLE_SUCCESS'		=> '拡張モジュールを停止しました',
+	'EXTENSION_ENABLE_SUCCESS'		=> '拡張モジュールを有効化しました',
 
-	'EXTENSION_NAME'			=> 'Extension Name',
-	'EXTENSION_ACTIONS'			=> 'Actions',
-	'EXTENSION_OPTIONS'			=> 'Options',
-	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
+	'EXTENSION_NAME'			=> '拡張モジュール名',
+	'EXTENSION_ACTIONS'			=> 'アクション',
+	'EXTENSION_OPTIONS'			=> 'オプション',
+	'EXTENSION_INSTALL_HEADLINE'=> '拡張モジュールのインストール手順',
 	'EXTENSION_INSTALL_EXPLAIN'	=> '<ol>
-			<li>Download an extension from phpBB’s extensions database</li>
-			<li>Unzip the extension and upload it to the <samp>ext/</samp> directory of your phpBB board</li>
-			<li>Enable the extension, here in the Extensions manager</li>
+			<li>phpBBの extensions database からモジュールをダウンロードします。</li>
+			<li>圧縮ファイルを解凍し、phpBB の <samp>ext/</samp> ディレクトリにアップロードします。</li>
+			<li>こちらの Extensions manager でモジュールを有効化します。</li>
 		</ol>',
-	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_HEADLINE'	=> '拡張モジュールのアップデート手順',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
-			<li>Disable the extension</li>
-			<li>Delete the extension’s files from the filesystem</li>
-			<li>Upload the new files</li>
-			<li>Enable the extension</li>
+			<li>拡張モジュールを停止します</li>
+			<li>拡張モジュールのファイルを削除します</li>
+			<li>更新ファイルをアップロードします</li>
+			<li>拡張モジュールを有効化します</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> '拡張モジュールの完全削除手順',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
-			<li>Disable the extension</li>
-			<li>Delete the extension’s data</li>
-			<li>Delete the extension’s files from the filesystem</li>
+			<li>拡張モジュールを停止します</li>
+			<li>拡張モジュールのデータを削除します</li>
+			<li>拡張モジュールのファイルを削除します</li>
 		</ol>',
 
-	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
-	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
-	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
-	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'モジュール“%s”に連動しているデータも削除してよろしいですか？?<br /><br />データ・設定を全て削除するとやり直しは出来ません。',
+	'EXTENSION_DISABLE_CONFIRM'		=> '拡張モジュール “%s” を本当に停止してもよろしいですか？',
+	'EXTENSION_ENABLE_CONFIRM'		=> '拡張モジュール “%s” を本当に有効化してもよろしいですか？',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> '動作保証されていないバージョンのモジュールを使用しますか？',
 
-	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+	'RETURN_TO_EXTENSION_LIST'	=> '拡張モジュールリストに戻る',
 
-	'EXT_DETAILS'			=> 'Extension Details',
-	'DISPLAY_NAME'			=> 'Display Name',
+	'EXT_DETAILS'			=> 'モジュールの詳細情報',
+	'DISPLAY_NAME'			=> '表示名称',
 	'CLEAN_NAME'			=> 'Clean Name',
-	'TYPE'					=> 'Type',
-	'DESCRIPTION'			=> 'Description',
-	'VERSION'				=> 'Version',
-	'HOMEPAGE'				=> 'Homepage',
-	'PATH'					=> 'File Path',
-	'TIME'					=> 'Release Time',
-	'LICENSE'				=> 'Licence',
+	'TYPE'				=> 'タイプ',
+	'DESCRIPTION'			=> '説明',
+	'VERSION'			=> 'バージョン',
+	'HOMEPAGE'			=> '公式サイト',
+	'PATH'				=> 'File Path',
+	'TIME'				=> 'リリース日',
+	'LICENSE'			=> 'ライセンス',
 
-	'REQUIREMENTS'			=> 'Requirements',
-	'PHPBB_VERSION'			=> 'phpBB Version',
-	'PHP_VERSION'			=> 'PHP Version',
-	'AUTHOR_INFORMATION'	=> 'Author Information',
-	'AUTHOR_NAME'			=> 'Name',
-	'AUTHOR_EMAIL'			=> 'Email',
-	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'REQUIREMENTS'			=> '動作条件',
+	'PHPBB_VERSION'			=> '対応 phpBB バージョン',
+	'PHP_VERSION'			=> 'PHP バージョン',
+	'AUTHOR_INFORMATION'		=> '作成者の情報',
+	'AUTHOR_NAME'			=> '作成者',
+	'AUTHOR_EMAIL'			=> 'メールアドレス',
+	'AUTHOR_HOMEPAGE'		=> '公式サイト',
 	'AUTHOR_ROLE'			=> 'Role',
 
-	'NOT_UP_TO_DATE'		=> '%s is not up to date',
-	'UP_TO_DATE'			=> '%s is up to date',
-	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
-	'DOWNLOAD_LATEST'		=> 'Download Version',
-	'NO_VERSIONCHECK'		=> 'No version check information given.',
+	'NOT_UP_TO_DATE'		=> '%s は更新されていません',
+	'UP_TO_DATE'			=> '%s は更新されています',
+	'ANNOUNCEMENT_TOPIC'		=> 'リリース告知',
+	'DOWNLOAD_LATEST'		=> 'ダウンロードバージョン',
+	'NO_VERSIONCHECK'		=> 'バージョン情報は提供されていません',
 
-	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
-	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
-	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> '全てのバージョンを再チェックする',
+	'FORCE_UNSTABLE'			=> '非安定バージョンをチェックする',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'バージョンチェックの設定',
 
-	'BROWSE_EXTENSIONS_DATABASE'		=> 'Browse extensions database',
+	'BROWSE_EXTENSIONS_DATABASE'		=> '拡張モジュールのデータベースを見る',
 
-	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
-	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+	'META_FIELD_NOT_SET'	=> '必要なメタフィールド %s が設定されていません',
+	'META_FIELD_INVALID'	=> 'メタフィールド %s が不正です',
 ));

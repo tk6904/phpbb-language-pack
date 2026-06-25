@@ -1,13 +1,16 @@
-Subject: Post approved - "{POST_SUBJECT}"
+Subject: 投稿記事が承認されました - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-Your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+フォーラムサイト "{SITENAME}" に於いて
+あなたが投稿した記事 "{POST_SUBJECT}" は
 
-If you want to view the post, click the following link:
+モデレータまたはフォーラムサイト管理人によって承認されました。
+
+記事を確認したい場合はこちらのリンクをクリックしてください：
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+投稿先トピックを確認したい場合はこちらのリンクをクリックしてください：
 {U_VIEW_TOPIC}
 
 {EMAIL_SIG}

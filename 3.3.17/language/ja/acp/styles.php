@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* acp_styles [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -37,55 +41,55 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, [
-	'ACP_STYLES_EXPLAIN'						=> 'Here you can manage the styles available on your board.<br>Please note you cannot uninstall the “<strong>prosilver</strong>” style as it is phpBB’s default and primary parent style.',
+	'ACP_STYLES_EXPLAIN'					=> 'ここでは掲示板で使用可能なスタイルの管理を行うことができます。<br>“<strong>prosilver</strong>”スタイルは、phpBBのデフォルトの親スタイルであるため、アンインストールできないことに注意してください。',
 
-	'CANNOT_BE_INSTALLED'						=> 'Cannot be installed',
-	'CONFIRM_UNINSTALL_STYLES'					=> 'Are you sure you wish to uninstall selected styles?',
-	'COPYRIGHT'									=> 'Copyright',
+	'CANNOT_BE_INSTALLED'					=> 'インストール出来ません',
+	'CONFIRM_UNINSTALL_STYLES'		=> '選択したスタイルをアンインストールしてもよろしいですか？',
+	'COPYRIGHT'										=> '著作権',
 
-	'DEACTIVATE_DEFAULT'						=> 'You cannot deactivate the default style.',
-	'DELETE_FROM_FS'							=> 'Delete from filesystem',
-	'DELETE_STYLE_FILES_FAILED'					=> 'Error deleting files for style "%s".',
-	'DELETE_STYLE_FILES_SUCCESS'				=> 'Files for style "%s" have been deleted.',
-	'DETAILS'									=> 'Details',
+	'DEACTIVATE_DEFAULT'					=> 'デフォルトスタイルを無効化する事はできません',
+	'DELETE_FROM_FS'							=> 'ファイルの削除',
+	'DELETE_STYLE_FILES_FAILED'		=> 'スタイル "%s" のファイル削除にエラーが発生しました',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'スタイル "%s" のファイルを削除しました',
+	'DETAILS'											=> '詳細データ',
 
-	'INHERITING_FROM'							=> 'Inherits from',
-	'INSTALL_STYLE'								=> 'Install style',
-	'INSTALL_STYLES'							=> 'Install styles',
-	'INSTALL_STYLES_EXPLAIN'					=> 'Here you can install new styles.<br>If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
-	'INVALID_STYLE_ID'							=> 'Invalid style ID.',
+	'INHERITING_FROM'							=> '次から継承',
+	'INSTALL_STYLE'								=> 'スタイルのインストール',
+	'INSTALL_STYLES'							=> 'スタイルのインストール',
+	'INSTALL_STYLES_EXPLAIN'			=> 'こちらでは新規スタイルをインストールできます。<br>もし下記の一覧からスタイルを指定できない場合は、スタイルがすでにインストール済みかどうか確認してください。インストールされていない場合は、正しくアップロードされているかどうか確認してください。',
+	'INVALID_STYLE_ID'						=> '不明なスタイル ID です',
 
-	'NO_MATCHING_STYLES_FOUND'					=> 'No styles match your query.',
-	'NO_UNINSTALLED_STYLE'						=> 'No uninstalled styles detected.',
+	'NO_MATCHING_STYLES_FOUND'		=> '要求条件に合ったスタイルはありません',
+	'NO_UNINSTALLED_STYLE'				=> 'インストールが可能なスタイルはありません',
 
-	'PURGED_CACHE'								=> 'Cache was purged.',
+	'PURGED_CACHE'								=> 'キャッシュは消去されました',
 
-	'REQUIRES_STYLE'							=> 'This style requires the style "%s" to be installed.',
+	'REQUIRES_STYLE'							=> 'このスタイルはスタイル "%s" がインストールされている必要があります。',
 
-	'STYLE_ACTIVATE'							=> 'Activate',
-	'STYLE_ACTIVE'								=> 'Active',
-	'STYLE_DEACTIVATE'							=> 'Deactivate',
-	'STYLE_DEFAULT'								=> 'Make default style',
-	'STYLE_DEFAULT_CHANGE_INACTIVE'				=> 'You must activate style before making it default style.',
-	'STYLE_ERR_INVALID_PARENT'					=> 'Invalid parent style.',
-	'STYLE_ERR_NAME_EXIST'						=> 'A style with that name already exists.',
-	'STYLE_ERR_STYLE_NAME'						=> 'You must supply a name for this style.',
-	'STYLE_INSTALLED'							=> 'Style "%s" has been installed.',
-	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
-	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
-	'STYLE_NAME'								=> 'Style name',
-	'STYLE_NAME_RESERVED'						=> 'Style "%s" can not be installed, because the name is reserved.',
-	'STYLE_NOT_INSTALLED'						=> 'Style "%s" was not installed.',
-	'STYLE_PATH'								=> 'Style path',
-	'STYLE_UNINSTALL'							=> 'Uninstall',
-	'STYLE_UNINSTALL_DEPENDENT'					=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
-	'STYLE_UNINSTALLED'							=> 'Style "%s" uninstalled successfully.',
-	'STYLE_PHPBB_VERSION'						=> 'phpBB Version',
-	'STYLE_USED_BY'								=> 'Used by (including robots)',
-	'STYLE_VERSION'								=> 'Style version',
+	'STYLE_ACTIVATE'							=> '有効にする',
+	'STYLE_ACTIVE'								=> '有効にする',
+	'STYLE_DEACTIVATE'						=> '無効にする',
+	'STYLE_DEFAULT'								=> 'デフォルトスタイルに指定する',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'		=> 'デフォルトスタイルに設定するには、スタイルを有効にする必要があります。',
+	'STYLE_ERR_INVALID_PARENT'				=> '不明な親スタイルです',
+	'STYLE_ERR_NAME_EXIST'						=> 'その名前のスタイルは既に存在しています',
+	'STYLE_ERR_STYLE_NAME'						=> 'スタイル名を入力する必要があります。',
+	'STYLE_INSTALLED'									=> 'スタイル "%s" がインストールされました',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'インストール済みのスタイル一覧に戻る',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'さらにスタイルをインストールする',
+	'STYLE_NAME'										=> 'スタイル名',
+	'STYLE_NAME_RESERVED'						=> 'スタイル "%s" はスタイル名がすでに使われているためインストールできません。',
+	'STYLE_NOT_INSTALLED'						=> 'スタイル "%s" はインストールされていません',
+	'STYLE_PATH'										=> 'スタイルのパス',
+	'STYLE_UNINSTALL'								=> 'アンインストール',
+	'STYLE_UNINSTALL_DEPENDENT'			=> 'スタイル "%s" は1つ以上の子スタイルを持つためにアンインストールできません。',
+	'STYLE_UNINSTALLED'							=> 'スタイル "%s" はアンインストールされました',
+	'STYLE_PHPBB_VERSION'						=> 'phpBB バージョン',
+	'STYLE_USED_BY'									=> '使用ユーザー数 （ボット含む）',
+	'STYLE_VERSION'									=> 'バージョン',
 
-	'UNINSTALL_PROSILVER'						=> 'You cannot uninstall the style “prosilver”.',
-	'UNINSTALL_DEFAULT'							=> 'You cannot uninstall the default style.',
+	'UNINSTALL_PROSILVER'						=> 'スタイル “prosilver” はアンインストールできません',
+	'UNINSTALL_DEFAULT'							=> 'デフォルトに設定されているスタイルはアンインストールできません',
 
-	'BROWSE_STYLES_DATABASE'					=> 'Browse styles database',
+	'BROWSE_STYLES_DATABASE'				=> 'Styles database を見る',
 ]);

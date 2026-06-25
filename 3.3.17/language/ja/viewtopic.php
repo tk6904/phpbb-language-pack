@@ -1,13 +1,12 @@
 <?php
 /**
 *
-* This file is part of the phpBB Forum Software package.
+* viewtopic [Japanese]
 *
-* @copyright (c) phpBB Limited <https://www.phpbb.com>
-* @license GNU General Public License, version 2 (GPL-2.0)
-*
-* For full copyright and license information, please see
-* the docs/CREDITS.txt file.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
@@ -37,89 +36,85 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'APPROVE'								=> 'Approve',
-	'ATTACHMENT'						=> 'Attachment',
-	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'The attachments feature has been disabled.',
+	'APPROVE'			=> '承認',
+	'ATTACHMENT'						=> '添付ファイル',
+	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'ファイル添付機能は無効に設定されています',
 
-	'BOOKMARK_ADDED'		=> 'Bookmarked topic successfully.',
-	'BOOKMARK_ERR'			=> 'Bookmarking the topic failed. Please try again.',
-	'BOOKMARK_REMOVED'		=> 'Removed bookmarked topic successfully.',
-	'BOOKMARK_TOPIC'		=> 'Bookmark topic',
-	'BOOKMARK_TOPIC_REMOVE'	=> 'Remove from bookmarks',
-	'BUMPED_BY'				=> 'Last bumped by %1$s on %2$s.',
-	'BUMP_TOPIC'			=> 'Bump topic',
+	'BOOKMARK_ADDED'		=> 'トピックをブックマークしました',
+	'BOOKMARK_ERR'			=> 'トピックのブックマークに失敗しました。もう一度お試しください。',
+	'BOOKMARK_REMOVED'		=> 'トピックのブックマークを解除しました',
+	'BOOKMARK_TOPIC'		=> 'このトピックをブックマークする',
+	'BOOKMARK_TOPIC_REMOVE'	=> 'ブックマークを解除',
+	'BUMPED_BY'				=> 'トピックを最後に上げたユーザー %1$s [ %2$s ]',
+	'BUMP_TOPIC'			=> 'このトピックを上げる',
 
-	'DELETE_TOPIC'			=> 'Delete topic',
-	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
-	'DISAPPROVE'					=> 'Disapprove',
-	'DOWNLOAD_NOTICE'		=> 'You do not have the required permissions to view the files attached to this post.',
+	'DELETE_TOPIC'			=> 'トピックを削除する',
+	'DELETED_INFORMATION'		=> '%1$s さんによって削除されました ： %2$s',
+	'DISAPPROVE'			=> '不承認',
+	'DOWNLOAD_NOTICE'		=> '添付ファイルを見るにはパーミッションが必要です',
 
 	'EDITED_TIMES_TOTAL'	=> array(
-		1	=> 'Last edited by %2$s on %3$s, edited %1$d time in total.',
-		2	=> 'Last edited by %2$s on %3$s, edited %1$d times in total.',
+		1	=> '最後に編集したユーザー %2$s [ %3$s ], 累計 %1$d 回',
 	),
-	'EMAIL_TOPIC'			=> 'Email topic',
-	'ERROR_NO_ATTACHMENT'	=> 'The selected attachment does not exist anymore.',
+	'EMAIL_TOPIC'			=> '友達にメールで知らせる',
+	'ERROR_NO_ATTACHMENT'	=> '添付ファイルが存在していません',
 
-	'FILE_NOT_FOUND_404'	=> 'The file <strong>%s</strong> does not exist.',
-	'FORK_TOPIC'			=> 'Copy topic',
-	'FULL_EDITOR'			=> 'Full Editor &amp; Preview',
+	'FILE_NOT_FOUND_404'	=> 'ファイル <strong>%s</strong> が存在していません',
+	'FORK_TOPIC'			=> 'トピックをコピーする',
+	'FULL_EDITOR'			=> '投稿画面へ',
 
-	'LINKAGE_FORBIDDEN'		=> 'You are not authorised to view, download or link from/to this site.',
-	'LOGIN_NOTIFY_TOPIC'	=> 'You have been notified about this topic, please login to view it.',
-	'LOGIN_VIEWTOPIC'		=> 'The board requires you to be registered and logged in to view this topic.',
+	'LINKAGE_FORBIDDEN'		=> 'サイト内の画像またはファイルについて、表示、ダウンロード、リンクをサイトから拒否されました',
+	'LOGIN_NOTIFY_TOPIC'	=> 'ウォッチ中のトピックに新着記事があります。ログインして記事をご確認ください。',
+	'LOGIN_VIEWTOPIC'		=> 'このトピックを閲覧するにはユーザー登録とログインが必要です',
 
-	'MAKE_ANNOUNCE'				=> 'Change to “Announcement”',
-	'MAKE_GLOBAL'				=> 'Change to “Global”',
-	'MAKE_NORMAL'				=> 'Change to “Standard Topic”',
-	'MAKE_STICKY'				=> 'Change to “Sticky”',
+	'MAKE_ANNOUNCE'				=> ' “告知トピック” へ変更する',
+	'MAKE_GLOBAL'				=> ' “グローバル告知トピック” へ変更する',
+	'MAKE_NORMAL'				=> ' “通常トピック” へ変更する',
+	'MAKE_STICKY'				=> ' “注目トピック” へ変更する',
 	'MAX_OPTIONS_SELECT'		=> array(
-		1	=> 'You may select <strong>%d</strong> option',
-		2	=> 'You may select up to <strong>%d</strong> options',
+		1	=> '<strong>%d</strong>  個までオプションを選択できます',
 	),
-	'MISSING_INLINE_ATTACHMENT'	=> 'The attachment <strong>%s</strong> is no longer available',
-	'MOVE_TOPIC'				=> 'Move topic',
+	'MISSING_INLINE_ATTACHMENT'	=> '添付ファイル <strong>%s</strong> がありません',
+	'MOVE_TOPIC'				=> 'トピックを移動する',
 
-	'NO_ATTACHMENT_SELECTED'=> 'You haven’t selected an attachment to download or view.',
-	'NO_NEWER_TOPICS'		=> 'There are no newer topics in this forum.',
-	'NO_OLDER_TOPICS'		=> 'There are no older topics in this forum.',
-	'NO_UNREAD_POSTS'		=> 'There are no new unread posts for this topic.',
-	'NO_VOTE_OPTION'		=> 'You must specify an option when voting.',
-	'NO_VOTES'				=> 'No votes',
-	'NO_AUTH_PRINT_TOPIC'	=> 'You are not authorised to print topics.',
+	'NO_ATTACHMENT_SELECTED'=> 'ダウンロードまたは表示する添付ファイルを選択していません',
+	'NO_NEWER_TOPICS'		=> 'このフォーラムにはこれ以上新しいトピックはありません',
+	'NO_OLDER_TOPICS'		=> 'このフォーラムにはこれ以上古いトピックはありません',
+	'NO_UNREAD_POSTS'		=> 'このトピックに未読記事はありません',
+	'NO_VOTE_OPTION'		=> '投票オプションを選択してください',
+	'NO_VOTES'			=> '0 票',
+	'NO_AUTH_PRINT_TOPIC'		=> 'トピックを印刷するにはパーミッションが必要です',
 
-	'POLL_ENDED_AT'			=> 'Poll ended at %s',
-	'POLL_RUN_TILL'			=> 'Poll runs till %s',
-	'POLL_VOTED_OPTION'		=> 'You voted for this option',
-	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
-	'PRINT_TOPIC'			=> 'Print view',
+	'POLL_ENDED_AT'			=> '投票は %s を以って終了致しました',
+	'POLL_RUN_TILL'			=> '投票は %s に終了します',
+	'POLL_VOTED_OPTION'		=> 'このオプションに投票しました',
+	'POST_DELETED_RESTORE'		=> 'この記事は削除されました。復元は可能です。',
+	'PRINT_TOPIC'			=> '印刷ビュー',
 
-	'QUICK_MOD'				=> 'Quick-mod tools',
-	'QUICKREPLY'			=> 'Quick Reply',
+	'QUICK_MOD'				=> 'モデレータ用クイックツール',
+	'QUICKREPLY'			=> 'クイック返信',
 
-	'REPLY_TO_TOPIC'		=> 'Reply to topic',
-	'RESTORE'				=> 'Restore',
-	'RESTORE_TOPIC'			=> 'Restore topic',
-	'RETURN_POST'			=> '%sReturn to the post%s',
+	'REPLY_TO_TOPIC'		=> 'トピックへ返信する',
+	'RESTORE'			=> '復元',
+	'RESTORE_TOPIC'			=> 'トピックを復元する',
+	'RETURN_POST'			=> '%s記事に戻る%s',
 
-	'SUBMIT_VOTE'			=> 'Submit vote',
+	'SUBMIT_VOTE'			=> '投票',
 
-	'TOPIC_TOOLS'			=> 'Topic tools',
-	'TOTAL_VOTES'			=> 'Total votes',
+	'TOPIC_TOOLS'			=> 'トピックツール',
+	'TOTAL_VOTES'			=> '投票総数',
 
-	'UNLOCK_TOPIC'			=> 'Unlock topic',
+	'UNLOCK_TOPIC'			=> 'トピックを開放する',
 
-	'VIEW_INFO'				=> 'Post details',
-	'VIEW_NEXT_TOPIC'		=> 'Next topic',
-	'VIEW_PREVIOUS_TOPIC'	=> 'Previous topic',
-	'VIEW_QUOTED_POST'		=> 'View quoted post',
-	'VIEW_RESULTS'			=> 'View results',
+	'VIEW_INFO'				=> '記事の詳細',
+	'VIEW_NEXT_TOPIC'		=> '次のトピックへ',
+	'VIEW_PREVIOUS_TOPIC'	=> '１つ前のトピックへ',
+	'VIEW_QUOTED_POST'		=> '引用された投稿を見る',
+	'VIEW_RESULTS'			=> '投票結果を見る',
 	'VIEW_TOPIC_POSTS'		=> array(
-		1	=> '%d post',
-		2	=> '%d posts',
+		1	=> '%d 件の記事',
 	),
-	'VIEW_UNREAD_POST'		=> 'First unread post',
-	'VOTE_SUBMITTED'		=> 'Your vote has been cast.',
-	'VOTE_CONVERTED'		=> 'Changing votes is not supported for converted polls.',
-
+	'VIEW_UNREAD_POST'		=> '未読記事へ',
+	'VOTE_SUBMITTED'		=> '投票しました',
+	'VOTE_CONVERTED'		=> 'データコンバートされた投票トピックの投票オプションを変更することはできません。残念ながら現在はサポート外です。',
 ));

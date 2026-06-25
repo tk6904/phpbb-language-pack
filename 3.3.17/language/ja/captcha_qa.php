@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* captcha_qa [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -37,28 +41,29 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'CAPTCHA_QA'				=> 'Q&amp;A',
-	'CONFIRM_QUESTION_EXPLAIN'	=> 'This question is a means of preventing automated form submissions by spambots.',
-	'CONFIRM_QUESTION_WRONG'	=> 'You have provided an invalid answer to the question.',
-	'CONFIRM_QUESTION_MISSING'	=> 'Questions for the captcha could not be retrieved. Please contact a board administrator.',
+	'CAPTCHA_QA'			=> 'Q&amp;A',
+	'CONFIRM_QUESTION_EXPLAIN'	=> '答えを正確に入力してください。答えられるかどうかでスパムボットか否かを判定します。',
+	'CONFIRM_QUESTION_WRONG'	=> 'クイズの答え が不正解です',
+	'CONFIRM_QUESTION_MISSING'	=> 'クイズが見つかりませんでした。掲示板管理者にお問い合わせください。',
 
-	'QUESTION_ANSWERS'			=> 'Answers',
-	'ANSWERS_EXPLAIN'			=> 'Please enter valid answers to the question, one per line.',
-	'CONFIRM_QUESTION'			=> 'Question',
+	'QUESTION_ANSWERS'			=> '答え',
+	'ANSWERS_EXPLAIN'			=> '答えを正確に入力してください。答えは複数設定することが可能です。その場合、１行につき１つの答えを入力してください。',
+	'CONFIRM_QUESTION'			=> 'クイズ',
 
-	'ANSWER'					=> 'Answer',
-	'EDIT_QUESTION'				=> 'Edit Question',
-	'QUESTIONS'					=> 'Questions',
-	'QUESTIONS_EXPLAIN'			=> 'For every form submission where you have enabled the Q&amp;A plugin, users will be asked one of the questions specified here. To use this plugin at least one question must be set in the default language. These questions should be easy for your target audience to answer but beyond the ability of a bot capable of running a Google™ search. Only a single proper question is necessary. If you start receiving spam registrations, the question should be changed. Enable the strict setting if your question relies on mixed case, punctuation or whitespace.',
-	'QUESTION_DELETED'			=> 'Question deleted',
-	'QUESTION_LANG'				=> 'Language',
-	'QUESTION_LANG_EXPLAIN'		=> 'The language this question and its answers are written in.',
-	'QUESTION_STRICT'			=> 'Strict check',
-	'QUESTION_STRICT_EXPLAIN'	=> 'Enable to enforce mixed case, punctuation and whitespace.',
+	'ANSWER'				=> '答え',
+	'EDIT_QUESTION'				=> '答えの編集',
+	'QUESTIONS'				=> 'クイズ',
+	'QUESTIONS_EXPLAIN'			=> 'ここで作成された “クイズ” と “答え” が CAPTCHA として使用されます。掲示板のデフォルト言語で少なくとも１つ “クイズ” を作成するまでこの CAPTCHA は有効化されない点にご注意ください。“クイズ” はユーザーが答えられるぐらい簡単で且つスパムボットが答えられないくらい難しいものが望ましいです。この CAPTCHA プラグインは “クイズ” の数が多ければ多いほど、また “クイズ” を定期的に更新すればするほど効果を発揮します。',
+	'QUESTION_DELETED'			=> 'クイズを削除しました',
+	'QUESTION_LANG'				=> '言語',
+	'QUESTION_LANG_EXPLAIN'		=> 'どの言語でクイズを作成するか指定してください。できれば言語毎にクイズを作成してください。',
+	'QUESTION_STRICT'			=> '厳密にチェック',
+	'QUESTION_STRICT_EXPLAIN'	=> '“はい” にした場合、大文字・小文字の違いと半角スペースの有無がチェックされます',
 
-	'QUESTION_TEXT'				=> 'Question',
-	'QUESTION_TEXT_EXPLAIN'		=> 'The question presented to the user.',
+	'QUESTION_TEXT'				=> 'クイズ',
+	'QUESTION_TEXT_EXPLAIN'		=> 'ユーザーに表示されるクイズです',
 
-	'QA_ERROR_MSG'				=> 'Please fill in all fields and enter at least one answer.',
-	'QA_LAST_QUESTION'			=> 'You cannot delete all questions while the plugin is active.',
+	'QA_ERROR_MSG'				=> '全てのクイズに答えてください',
+	'QA_LAST_QUESTION'			=> 'この CAPTCHA プラグインが有効な間は “クイズ” を1つ残らず削除することはできません',
+	
 ));

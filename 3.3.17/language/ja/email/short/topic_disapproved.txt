@@ -1,10 +1,13 @@
-Subject: Topic disapproved - "{TOPIC_TITLE}"
+Subject: トピックが却下されました - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-Your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+フォーラムサイト "{SITENAME}" に於いて
+あなたが投稿したトピック "{TOPIC_TITLE}" が
 
-The following reason was given for the disapproval:
+モデレータまたはフォーラムサイト管理人によって却下されました。
+
+以下は却下された理由です：
 
 {REASON}
 

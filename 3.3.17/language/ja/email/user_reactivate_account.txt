@@ -1,17 +1,23 @@
-Subject: Reactivate your account on "{SITENAME}"
+Subject: フォーラムサイト "{SITENAME}" のアカウントを有効化してください
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+フォーラムサイト管理人があなたに対してアカウントの再有効化を要求しました。
+その為あなたのアカウントは現在、無効化されています。
+フォーラムサイトにログインするにはアカウントを再有効化する必要があります。
 
-Please keep this email for your records. Your account information is as follows:
+このメールは大切に保管してください。
+あなたのアカウント情報はこちらです：
 
 ----------------------------
-Username: {USERNAME}
+ユーザー名： {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
-Please visit the following link to reactivate your account:
+こちらをクリックしてアカウントを有効化してください：
 
 {U_ACTIVATE}
 

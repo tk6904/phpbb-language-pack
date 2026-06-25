@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* acp_modules [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -37,47 +41,47 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACP_MODULE_MANAGEMENT_EXPLAIN'	=> 'Here you are able to manage all kind of modules. Please note that the ACP has a three-level menu structure (Category -> Category -> Module) whereby the others having a two-level menu structure (Category -> Module) which must be kept. Please also be aware that you may lock out yourself if you disable or delete the modules responsible for the module management itself.',
-	'ADD_MODULE'					=> 'Add module',
-	'ADD_MODULE_CONFIRM'			=> 'Are you sure you want to add the selected module with the selected mode?',
-	'ADD_MODULE_TITLE'				=> 'Add module',
+	'ACP_MODULE_MANAGEMENT_EXPLAIN'	=> 'ここではモジュールの管理を行うことができます。AdminCP は３階層メニュー構成 (カテゴリ->カテゴリ->モジュール)、ユーザーCP と モデレータCP は２階層メニュー構成 (カテゴリ->モジュール) で成り立っています。',
+	'ADD_MODULE'			=> 'モジュールの追加',
+	'ADD_MODULE_CONFIRM'		=> '選択したモジュールを本当に追加してもよろしいですか？',
+	'ADD_MODULE_TITLE'		=> 'モジュールの追加',
 
-	'CANNOT_REMOVE_MODULE'	=> 'Unable to remove module, it has assigned children. Please remove or move all children before performing this action.',
-	'CATEGORY'				=> 'Category',
-	'CHOOSE_MODE'			=> 'Choose module mode',
-	'CHOOSE_MODE_EXPLAIN'	=> 'Choose the modules mode being used.',
-	'CHOOSE_MODULE'			=> 'Choose module',
-	'CHOOSE_MODULE_EXPLAIN'	=> 'Choose the file being called by this module.',
-	'CREATE_MODULE'			=> 'Create new module',
+	'CANNOT_REMOVE_MODULE'	=> '指定したモジュールが子モジュールを持っているため、モジュールを削除できません。先に全ての子モジュールを削除または移動してからこのアクションを実行してください。',
+	'CATEGORY'			=> 'カテゴリ',
+	'CHOOSE_MODE'			=> 'モジュールモードの選択',
+	'CHOOSE_MODE_EXPLAIN'		=> '使用するモードを選択してください',
+	'CHOOSE_MODULE'			=> 'モジュールの選択',
+	'CHOOSE_MODULE_EXPLAIN'		=> '使用するモジュールファイルを選択してください',
+	'CREATE_MODULE'			=> 'モジュールの作成',
 
-	'DEACTIVATED_MODULE'	=> 'Deactivated module',
-	'DELETE_MODULE'			=> 'Delete module',
-	'DELETE_MODULE_CONFIRM'	=> 'Are you sure you want to remove this module?',
+	'DEACTIVATED_MODULE'		=> '無効モジュール',
+	'DELETE_MODULE'			=> 'モジュールの削除',
+	'DELETE_MODULE_CONFIRM'		=> 'このモジュールを本当に削除してもよろしいですか？',
 
-	'EDIT_MODULE'			=> 'Edit module',
-	'EDIT_MODULE_EXPLAIN'	=> 'Here you are able to enter module specific settings.',
+	'EDIT_MODULE'			=> 'モジュールの編集',
+	'EDIT_MODULE_EXPLAIN'	=> 'ここではモジュールの詳細設定を編集できます',
 
-	'HIDDEN_MODULE'			=> 'Hidden module',
+	'HIDDEN_MODULE'			=> '隠れモジュール',
 
-	'MODULE'					=> 'Module',
-	'MODULE_ADDED'				=> 'Module successfully added.',
-	'MODULE_DELETED'			=> 'Module successfully removed.',
-	'MODULE_DISPLAYED'			=> 'Module displayed',
-	'MODULE_DISPLAYED_EXPLAIN'	=> 'If you do not wish to display this module, but want to use it, set this to no.',
-	'MODULE_EDITED'				=> 'Module successfully edited.',
-	'MODULE_ENABLED'			=> 'Module enabled',
-	'MODULE_LANGNAME'			=> 'Module language name',
-	'MODULE_LANGNAME_EXPLAIN'	=> 'Enter the displayed module name. Use language constant if name is served from language file.',
-	'MODULE_TYPE'				=> 'Module type',
+	'MODULE'			=> 'モジュール',
+	'MODULE_ADDED'			=> 'モジュールの追加に成功しました',
+	'MODULE_DELETED'		=> 'モジュールの削除に成功しました',
+	'MODULE_DISPLAYED'		=> 'モジュールを表示する',
+	'MODULE_DISPLAYED_EXPLAIN'	=> 'このモジュールを表示しない場合、 “いいえ” を選択してください',
+	'MODULE_EDITED'			=> 'モジュールの編集に成功しました',
+	'MODULE_ENABLED'		=> 'モジュールを有効にする',
+	'MODULE_LANGNAME'		=> 'モジュール名',
+	'MODULE_LANGNAME_EXPLAIN'	=> 'モジュールの名前を入力してください。名前が言語ファイル内で定義されている場合、その定義 （言語キー） を使用してください。',
+	'MODULE_TYPE'			=> 'モジュールタイプ',
 
-	'NO_CATEGORY_TO_MODULE'	=> 'Unable to turn category into module. Please remove/move all children before performing this action.',
-	'NO_MODULE'				=> 'No module found.',
-	'NO_MODULE_ID'			=> 'No module id specified.',
-	'NO_MODULE_LANGNAME'	=> 'No module language name specified.',
-	'NO_PARENT'				=> 'No Parent',
+	'NO_CATEGORY_TO_MODULE'		=> 'カテゴリをモジュールに変更できませんでした。全ての子モジュールもしくは子カテゴリを 削除/移動 してからこのアクションを実行してください。',
+	'NO_MODULE'			=> 'モジュールが見つかりません',
+	'NO_MODULE_ID'			=> 'モジュールが指定されていません',
+	'NO_MODULE_LANGNAME'		=> 'モジュール名が指定されていません',
+	'NO_PARENT'			=> '親カテゴリなし',
 
-	'PARENT'				=> 'Parent',
-	'PARENT_NO_EXIST'		=> 'Parent does not exist.',
+	'PARENT'			=> '親カテゴリ',
+	'PARENT_NO_EXIST'		=> '親カテゴリが存在しません',
 
-	'SELECT_MODULE'			=> 'Select a module',
+	'SELECT_MODULE'			=> 'モジュールの選択',
 ));

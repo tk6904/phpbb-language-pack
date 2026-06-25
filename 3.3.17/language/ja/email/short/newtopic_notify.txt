@@ -1,11 +1,16 @@
-Subject: New topic in "{FORUM_NAME}"
+Subject: 新着トピック - フォーラム "{FORUM_NAME}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-The forum "{FORUM_NAME}" received a new topic "{TOPIC_TITLE}"<!-- IF AUTHOR_NAME != '' --> by {AUTHOR_NAME}<!-- ENDIF --> since your last visit to "{SITENAME}". No more notifications will be sent until you visit the forum.
+フォーラムサイト "{SITENAME}" に於いて
+フォーラム "{FORUM_NAME}" に
+新しいトピック "{TOPIC_TITLE}"
+
+が投稿されました。<!-- IF AUTHOR_NAME !== '' --> （投稿者： {AUTHOR_NAME} さん<!-- ENDIF -->
+フォーラムを見るまで新たな通知が送られる事はありません。
 {U_FORUM}
 
-If you no longer wish to watch this forum click the following link:
+新着トピックの通知メールを停止したい場合はこちらをクリックしてください：
 {U_STOP_WATCHING_FORUM}
 
 {EMAIL_SIG}

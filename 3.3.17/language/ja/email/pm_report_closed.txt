@@ -1,9 +1,11 @@
-Subject: Report closed - "{PM_SUBJECT}"
+Subject: 通報 [ PM ] の審査が完了しました - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-The report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed.
+フォーラムサイト "{SITENAME}" に於いて
+あなたがプライベートメッセージ "{PM_SUBJECT}" に関して行った通報は
+モデレーターまたは管理者によって処理されました。報告は終了しました。
 
-If you have further questions, please contact {CLOSER_NAME} by private message.
+ご不明な点がございましたら、プライベートメッセージにて {CLOSER_NAME} までお問い合わせください。
 
 {EMAIL_SIG}

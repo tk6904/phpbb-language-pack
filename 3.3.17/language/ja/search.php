@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* search [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -37,89 +41,85 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ALL_AVAILABLE'			=> 'All available',
-	'ALL_RESULTS'			=> 'All results',
+	'ALL_AVAILABLE'			=> 'すべて',
+	'ALL_RESULTS'			=> 'すべて',
 
-	'DISPLAY_RESULTS'		=> 'Display results as',
+	'DISPLAY_RESULTS'		=> '検索結果の表示',
 
 	'FOUND_SEARCH_MATCHES'		=> array(
-		1	=> 'Search found %d match',
-		2	=> 'Search found %d matches',
+		1	=> '検索結果 %d 件',
 	),
 	'FOUND_MORE_SEARCH_MATCHES'		=> array(
-		1	=> 'Search found more than %d match',
-		2	=> 'Search found more than %d matches',
+		1	=> '検索結果 %d 件以上',
 	),
 
-	'GLOBAL'				=> 'Global announcement',
+	'GLOBAL'			=> 'グローバル告知トピック',
 
-	'IGNORED_TERMS'			=> 'ignored',
-	'IGNORED_TERMS_EXPLAIN'	=> 'The following words in your search query were ignored because they are too common words: <strong>%s</strong>.',
+	'IGNORED_TERMS'			=> '無効な検索キーワード',
+	'IGNORED_TERMS_EXPLAIN'		=> '次の検索キーワードは無効です: <strong>%s</strong>',
 
-	'JUMP_TO_POST'			=> 'Jump to post',
+	'JUMP_TO_POST'			=> '記事へ移動',
 
-	'LOGIN_EXPLAIN_EGOSEARCH'	=> 'The board requires you to be registered and logged in to view your own posts.',
-	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'The board requires you to be registered and logged in to view your unread posts.',
-	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'The board requires you to be registered and logged in to view new posts since your last visit.',
+	'LOGIN_EXPLAIN_EGOSEARCH'	=> '投稿記事を確認するにはユーザー登録とログインが必要です',
+	'LOGIN_EXPLAIN_UNREADSEARCH'	=> '未読記事を確認するにはユーザー登録とログインが必要です',
+	'LOGIN_EXPLAIN_NEWPOSTS'	=> '最新記事を確認するにはユーザー登録とログインが必要です',
 
 	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> array(
-		1	=> 'You specified too many words to search for. Please do not enter more than %1$d word.',
-		2	=> 'You specified too many words to search for. Please do not enter more than %1$d words.',
+		1	=> '検索キーワードが多すぎます。 %1$d 個以上の検索キーワードを同時に検索しない様お願いします。',
 	),
 
-	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
-	'NO_RECENT_SEARCHES'	=> 'No searches have been carried out recently.',
-	'NO_SEARCH'				=> 'Sorry but you are not permitted to use the search system.',
-	'NO_SEARCH_RESULTS'		=> 'No suitable matches were found.',
+	'NO_KEYWORDS'			=> '有効な検索キーワードを少なくとも１つ入力してください。検索キーワードはワイルドカードを除いて %s 字以上 %s 字以下である必要があります。',
+	'NO_RECENT_SEARCHES'		=> '最近検索されたキーワードはありません',
+	'NO_SEARCH'			=> '検索機能を使用するにはパーミッションが必要です',
+	'NO_SEARCH_RESULTS'		=> '検索に一致する記事が見つかりませんでした',
 	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_TIME'		=> array(
-		1	=> 'Sorry but you cannot use search at this time. Please try again in %d second.',
-		2	=> 'Sorry but you cannot use search at this time. Please try again in %d seconds.',
+		1	=> '連続して検索することはできません。%d 秒後に再度お試しください。',
 	),
-	'NO_SEARCH_UNREADS'		=> 'Sorry but searching for unread posts has been disabled on this board.',
-	'WORD_IN_NO_POST'		=> 'No posts were found because the word <strong>%s</strong> is not contained in any post.',
-	'WORDS_IN_NO_POST'		=> 'No posts were found because the words <strong>%s</strong> are not contained in any post.',
+	'NO_SEARCH_UNREADS'		=> '未読記事を検索することはできません',
 
-	'POST_CHARACTERS'		=> 'characters of posts',
-	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
+	'WORD_IN_NO_POST'		=> '検索キーワード <strong>%s</strong> を含む記事が存在しないため検索結果は 0 件です',
+	'WORDS_IN_NO_POST'		=> '検索キーワード <strong>%s</strong> を含む記事が存在しないため検索結果は 0 件です',
 
-	'RECENT_SEARCHES'		=> 'Recent searches',
-	'RESULT_DAYS'			=> 'Limit results to previous',
-	'RESULT_SORT'			=> 'Sort results by',
-	'RETURN_FIRST'			=> 'Return first',
-	'RETURN_FIRST_EXPLAIN'	=> 'Set to 0 to display the entire post.',
-	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
+	'POST_CHARACTERS'		=> '文字',
+	'PHRASE_SEARCH_DISABLED'	=> 'その語句による検索はサポートしていません',
 
-	'SEARCHED_FOR'				=> 'Search term used',
-	'SEARCHED_TOPIC'			=> 'Searched topic',
-	'SEARCHED_QUERY'			=> 'Searched query',
-	'SEARCH_ALL_TERMS'			=> 'Search for all terms or use query as entered',
-	'SEARCH_ANY_TERMS'			=> 'Search for any terms',
-	'SEARCH_AUTHOR'				=> 'Search for author',
-	'SEARCH_AUTHOR_EXPLAIN'		=> 'Use * as a wildcard for partial matches.',
-	'SEARCH_FIRST_POST'			=> 'First post of topics only',
-	'SEARCH_FORUMS'				=> 'Search in forums',
-	'SEARCH_FORUMS_EXPLAIN'		=> 'Select the forum or forums you wish to search in. Subforums are searched automatically if you do not disable “search subforums“ below.',
-	'SEARCH_IN_RESULTS'			=> 'Search these results',
-	'SEARCH_KEYWORDS_EXPLAIN'	=> 'Place <strong>+</strong> in front of a word which must be found and <strong>-</strong> in front of a word which must not be found. Put a list of words separated by <strong>|</strong> into brackets if only one of the words must be found. Use * as a wildcard for partial matches.',
-	'SEARCH_MSG_ONLY'			=> 'Message text only',
-	'SEARCH_OPTIONS'			=> 'Search options',
-	'SEARCH_QUERY'				=> 'Search query',
-	'SEARCH_SUBFORUMS'			=> 'Search subforums',
-	'SEARCH_TITLE_MSG'			=> 'Post subjects and message text',
-	'SEARCH_TITLE_ONLY'			=> 'Topic titles only',
-	'SEARCH_WITHIN'				=> 'Search within',
-	'SORT_ASCENDING'			=> 'Ascending',
-	'SORT_AUTHOR'				=> 'Author',
-	'SORT_DESCENDING'			=> 'Descending',
-	'SORT_FORUM'				=> 'Forum',
-	'SORT_POST_SUBJECT'			=> 'Post subject',
-	'SORT_TIME'					=> 'Post time',
-	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
-	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
+	'RECENT_SEARCHES'		=> '最近検索されたキーワード',
+	'RESULT_DAYS'			=> '期間内検索',
+	'RESULT_SORT'			=> 'ソート',
+	'RETURN_FIRST'			=> '表示文字数',
+	'RETURN_FIRST_EXPLAIN'	=> '0 に設定すると投稿全体が表示されます',
+	'GO_TO_SEARCH_ADV'		=> '詳細検索ページに戻る',
 
-	'TOO_FEW_AUTHOR_CHARS'	=> array(
-		1	=> 'You must specify at least %d character of the authors name.',
-		2	=> 'You must specify at least %d characters of the authors name.',
+	'SEARCHED_FOR'			=> '有効な検索キーワード',
+	'SEARCHED_TOPIC'		=> '検索トピック',
+	'SEARCHED_QUERY'		=> '検索クエリ',
+	'SEARCH_ALL_TERMS'		=> 'AND検索 または クエリ検索',
+	'SEARCH_ANY_TERMS'		=> 'OR検索',
+	'SEARCH_AUTHOR'			=> '投稿者検索',
+	'SEARCH_AUTHOR_EXPLAIN'		=> '部分一致としてワイルドカード(*)を使用できます',
+	'SEARCH_FIRST_POST'		=> 'トピックの最初の記事のみ',
+	'SEARCH_FORUMS'			=> 'フォーラム',
+	'SEARCH_FORUMS_EXPLAIN'		=> '検索を行いたいフォーラムを選択します。下の “サブフォーラム” を “いいえ” にしていない限り、サブフォーラム内の記事も自動的に検索されます。',
+	'SEARCH_IN_RESULTS'		=> 'この検索結果からさらに検索',
+	'SEARCH_KEYWORDS_EXPLAIN'	=> '検索したくない記事のキーワードには <strong>-</strong> をキーワードの直前に置いてください。部分一致としてワイルドカード(*)を使用できます。-* を使用する場合はクエリ検索を選択してください。',
+	'SEARCH_MSG_ONLY'		=> 'メッセージのみ',
+	'SEARCH_OPTIONS'		=> '検索オプション',
+	'SEARCH_QUERY'			=> '検索クエリ',
+	'SEARCH_SUBFORUMS'		=> 'サブフォーラム',
+	'SEARCH_TITLE_MSG'		=> '記事の件名とメッセージ',
+	'SEARCH_TITLE_ONLY'		=> 'トピックの件名のみ',
+	'SEARCH_WITHIN'			=> '検索対象',
+	'SORT_ASCENDING'		=> '昇順',
+	'SORT_AUTHOR'			=> '投稿者',
+	'SORT_DESCENDING'		=> '降順',
+	'SORT_FORUM'			=> 'フォーラム',
+	'SORT_POST_SUBJECT'		=> '記事の件名',
+	'SORT_TIME'			=> '投稿日時',
+	'SPHINX_SEARCH_FAILED'		=> '検索に失敗しました: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> '検索機能がうまく働きませんでした。この失敗についての詳細はエラーログに記録されます。',
+
+	'TOO_FEW_AUTHOR_CHARS'		=> array(
+		1	=> '投稿者名は %d 字以上である必要があります',
 	),
 ));

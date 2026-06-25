@@ -1,7 +1,9 @@
-Subject: Report deleted - "{PM_SUBJECT}"
+Subject: 通報 [ PM ] は削除されました - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-The report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+フォーラムサイト "{SITENAME}" に於いて
+あなたがプライベートメッセージ "{PM_SUBJECT}" に関して行った通報は
+モデレータまたはフォーラムサイト管理人によって削除されました。
 
 {EMAIL_SIG}

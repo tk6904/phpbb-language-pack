@@ -1,13 +1,20 @@
-Subject: Report closed - "{POST_SUBJECT}"
+Subject: 通報の審査が完了しました - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-The report you filed on the post "{POST_SUBJECT}" by "{AUTHOR_NAME}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a private message.
+フォーラムサイト "{SITENAME}" の
+トピック "{TOPIC_TITLE}" において
+"{AUTHOR_NAME}" による投稿記事 "{POST_SUBJECT}"
 
-You can view your reported post by clicking on the following link:
+に対してあなたが行った通報は
+モデレーターまたはフォーラムサイト管理人によって処理されました。
+既に審査は完了しています。
+この件に関して何か質問がある場合は
+審査ユーザー {CLOSER_NAME} にプライベートメッセージで連絡してください。
 
+以下のリンクをクリックすると、通報された記事を見ることができます：
 {U_VIEW_POST}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of closed post reports by changing the appropriate setting in your profile.
+あなたは、このイベントの通知をリクエストしています。プロフィールの適切な設定を変更することで、いつでも審査完了した通報の通知を受けないように選択することができます。
 
 {EMAIL_SIG}

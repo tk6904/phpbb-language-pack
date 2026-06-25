@@ -1,13 +1,19 @@
-Subject: Private message report closed - "{SUBJECT}"
+Subject: プライベートメッセージ通報の審査が完了しました - "{SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-The report you filed on the private message "{SUBJECT}" by "{AUTHOR_NAME}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a private message.
+フォーラムサイト "{SITENAME}" において
+"{AUTHOR_NAME}" によるプライベートメッセージ "{SUBJECT}"
 
-You can view your reported private message by clicking on the following link:
+に対してあなたが行った通報が
+モデレーターまたはフォーラムサイト管理人によって審査されました。
+既に審査は完了しています。
+この件に関して何か質問がある場合は
+審査ユーザー {CLOSER_NAME} に直接お問い合わせください。
 
+以下のリンクをクリックすると、通報されたプライベートメッセージを見ることができます：
 {U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of closed private message reports by changing the appropriate setting in your profile.
+あなたは、このイベントの通知をリクエストしています。プロフィールの適切な設定を変更することで、いつでも審査完了したプライベートメッセージ通報の通知を受けないように選択することができます。
 
 {EMAIL_SIG}

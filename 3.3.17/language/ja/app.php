@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* app [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -41,8 +45,8 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> '引数 #%1$s の値が指定されていません: クラス <strong>%2$s</strong> の <strong>%3$s</strong>',
-	'CONTROLLER_NOT_SPECIFIED'			=> 'コントローラーが指定されていません。',
-	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'コントローラーのメソッドが指定されていません。',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'コントローラー「<strong>%s</strong>」のサービスが ./config/services.yml で定義されていません。',
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> '引数 #%1$s の値がありません: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'		=> 'コントローラーが指定されていません',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'コントローラーメソッドが指定されていません',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'コントローラーサービス“<strong>%s</strong>”が ./config/services.yml 内に定義されていません',
 ));

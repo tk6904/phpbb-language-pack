@@ -1,11 +1,18 @@
-Subject: Inactive account reminder
+Subject: アカウント有効化の催促
 
-Hello {USERNAME},
+{USERNAME} さん
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+フォーラムサイト "{SITENAME}" で
+日付 "{REGISTER_DATE}"
+
+にユーザー登録した事を憶えていますか？
+
+フォーラムサイトにログインするにはアカウントを有効化する必要があります。
+もしまだ上記フォーラムサイトに登録ユーザーとして参加する意思がある場合
+下記リンクをクリックしてアカウントを有効化してください。
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+フォーラムサイト「{SITENAME}」に参加して頂ける事をお待ちしています。
 
 {EMAIL_SIG}

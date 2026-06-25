@@ -1,11 +1,16 @@
-Subject: You have been added to this usergroup
+Subject: グループに追加されました
 
-Congratulations,
+おめでとうございます
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+フォーラムサイト "{SITENAME}" に於いてあなたは
+グループ "{GROUP_NAME}" 
 
-You can view your groups information here:
+に追加されました。
+
+このアクションはグループリーダーまたはフォーラムサイト管理人によって実行されました。
+このグループ参加についての詳細が知りたい場合、グループリーダーまたはフォーラムサイト管理人に直接お問い合わせください。
+
+グループ情報を見るにはこちらをクリックしてください：
 {U_GROUP}
 
 {EMAIL_SIG}

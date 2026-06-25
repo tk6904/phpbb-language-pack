@@ -1,9 +1,14 @@
-Subject: Account activated
+Subject: アカウントが有効化されました
 
-Hello {USERNAME},
+{USERNAME} さん
 
-Your account on "{SITENAME}" has been activated by an administrator, you may login now.
+フォーラムサイト "{SITENAME}" のアカウントが有効化されました。
+いつでもログインしていただけます。
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
 {EMAIL_SIG}

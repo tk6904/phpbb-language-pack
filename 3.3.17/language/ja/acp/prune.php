@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* acp_prune [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -38,58 +42,58 @@ if (empty($lang) || !is_array($lang))
 
 // User pruning
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'ここではユーザーアカウントの削除または無効化を行うことができます。条件を設けてアカウントを削除する事も可能です； 投稿数、最近の訪問日時など。これらの条件を同時に指定する事も可能です。例えば、最近の訪問日時が 2002-01-01 以前で且つ投稿数が 10 以下のユーザーのアカウントだけを 削除/無効化 できます。削除するアカウントのリストを直接テキストボックスに入力する事によって複数のアカウントを削除する事もできます。その場合、設定した条件は無視されます。一度アカウントを削除してしまうと元には戻せませんのでご注意ください。',
 
-	'CRITERIA'				=> 'Criteria',
+	'CRITERIA'				=> '判断基準',
 
-	'DEACTIVATE_DELETE'			=> 'Deactivate or delete',
-	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Choose whether to deactivate users or delete them entirely. Please note that deleted users cannot be restored!',
-	'DELETE_USERS'				=> 'Delete',
-	'DELETE_USER_POSTS'			=> 'Delete pruned user posts',
-	'DELETE_USER_POSTS_EXPLAIN' => 'Removes posts made by deleted users, has no effect if users are deactivated.',
+	'DEACTIVATE_DELETE'			=> 'アカウントの 削除/無効化',
+	'DEACTIVATE_DELETE_EXPLAIN'	=> 'アカウントの削除または無効化を選択してください。一度ユーザーを削除してしまうと元には戻せませんのでご注意ください。',
+	'DELETE_USERS'				=> '削除',
+	'DELETE_USER_POSTS'			=> 'ユーザーが投稿した記事も削除する',
+	'DELETE_USER_POSTS_EXPLAIN' => 'アカウントを削除すると同時にそのユーザーが投稿した記事も全て削除します。アカウント無効化の場合、効果はありません。',
 
-	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
+	'JOINED_EXPLAIN'			=> '日付を <kbd>YYYY-MM-DD</kbd> 形式で入力してください',
 
-	'LAST_ACTIVE_EXPLAIN'		=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. Enter <kbd>0000-00-00</kbd> to prune users who never logged in, <em>Before</em> and <em>After</em> conditions will be ignored.',
+	'LAST_ACTIVE_EXPLAIN'		=> '日付を <kbd>YYYY-MM-DD</kbd> 形式で入力してください。<kbd>0000-00-00</kbd> を入力した場合、<em>以前</em> と <em>以後</em> の条件指定は無視され、一度もログインしていないアカウントだけをプルーニングします。',
 
-	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
-	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
-	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
-	'PRUNE_USERS_LIST'				=> 'Users to be pruned',
-	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
+	'POSTS_ON_QUEUE'			=> '承認待ちの記事数',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> '対象範囲をグループで絞る',
+	'PRUNE_USERS_GROUP_NONE'	=> '全てのグループ',
+	'PRUNE_USERS_LIST'			=> 'プルーニングするユーザー',
+	'PRUNE_USERS_LIST_DELETE'		=> '次に挙げるユーザーのアカウントが削除されます',
+	'PRUNE_USERS_LIST_DEACTIVATE'		=> '次に挙げるユーザーのアカウントが無効化されます',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
+	'SELECT_USERS_EXPLAIN'		=> 'ユーザーを指定する場合はこのテキストボックスにユーザー名を入力してください。ここで指定されたユーザー名は上記の条件設定より優先され、必ずプルーニングされます。ウェブマスターをプルーニングすることはできない点にご注意ください。',
 
-	'USER_DEACTIVATE_SUCCESS'	=> 'The selected users have been deactivated successfully.',
-	'USER_DELETE_SUCCESS'		=> 'The selected users have been deleted successfully.',
-	'USER_PRUNE_FAILURE'		=> 'No users fit the selected criteria.',
+	'USER_DEACTIVATE_SUCCESS'	=> 'ユーザーのアカウント無効化に成功しました',
+	'USER_DELETE_SUCCESS'		=> 'ユーザーのアカウント削除に成功しました',
+	'USER_PRUNE_FAILURE'		=> '設定条件を満たすユーザーが見つかりません',
 
-	'WRONG_ACTIVE_JOINED_DATE'	=> 'The date entered is wrong, it is expected in <kbd>YYYY-MM-DD</kbd> format.',
+	'WRONG_ACTIVE_JOINED_DATE'	=> '入力した 日付 が正しくありません。日付は <kbd>YYYY-MM-DD</kbd> 形式にする必要があります。',
 ));
 
 // Forum Pruning
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_FORUMS_EXPLAIN'	=> 'This will delete any topic which has not been posted to or viewed within the number of days you select. If you do not enter a number then all topics will be deleted. By default, it will not remove topics in which polls are still running nor will it remove stickies and announcements.',
+	'ACP_PRUNE_FORUMS_EXPLAIN'	=> 'ここでは選択したフォーラム内のトピックをプルーニング（一括削除）できます。指定した日数内に返信または閲覧されていないトピックだけをプルーニングできます。日数を指定せずに削除した場合、フォーラム内の全トピックが削除されます。デフォルトで投票トピック、注目トピック、告知トピックは削除の対象から外されています。',
 
-	'FORUM_PRUNE'		=> 'Forum prune',
+	'FORUM_PRUNE'		=> 'フォーラムのプルーニング',
 
-	'NO_PRUNE'			=> 'No forums pruned.',
+	'NO_PRUNE'		=> 'プルーニングしたフォーラムはありません。',
 
-	'SELECTED_FORUM'	=> 'Selected forum',
-	'SELECTED_FORUMS'	=> 'Selected forums',
+	'SELECTED_FORUM'	=> '選択したフォーラム',
+	'SELECTED_FORUMS'	=> '選択したフォーラム',
 
-	'POSTS_PRUNED'					=> 'Posts pruned',
-	'PRUNE_ANNOUNCEMENTS'			=> 'Prune announcements',
-	'PRUNE_FINISHED_POLLS'			=> 'Prune closed polls',
-	'PRUNE_FINISHED_POLLS_EXPLAIN'	=> 'Removes topics with polls which have ended.',
-	'PRUNE_FORUM_CONFIRM'			=> 'Are you sure you want to prune the selected forums with the settings specified? Once removed, there is no way to recover the pruned posts and topics.',
-	'PRUNE_NOT_POSTED'				=> 'Days since last posted',
-	'PRUNE_NOT_VIEWED'				=> 'Days since last viewed',
-	'PRUNE_OLD_POLLS'				=> 'Prune old polls',
-	'PRUNE_OLD_POLLS_EXPLAIN'		=> 'Removes topics with polls not voted in for post age days.',
-	'PRUNE_STICKY'					=> 'Prune stickies',
-	'PRUNE_SUCCESS'					=> 'Pruning of forums was successful.',
+	'POSTS_PRUNED'				=> 'プルーニングした返信記事',
+	'PRUNE_ANNOUNCEMENTS'			=> '告知トピックをプルーニングする',
+	'PRUNE_FINISHED_POLLS'			=> '終了済み投票トピックをプルーニングする',
+	'PRUNE_FINISHED_POLLS_EXPLAIN'		=> '既に終了している投票トピックを削除します',
+	'PRUNE_FORUM_CONFIRM'			=> '選択したフォーラムを本当にプルーニングしますか？ 一度記事を削除してしまうと元には戻せませんのでご注意ください。',
+	'PRUNE_NOT_POSTED'			=> 'トピックの未返信経過日数（返信寿命）',
+	'PRUNE_NOT_VIEWED'			=> 'トピックの未閲覧経過日数（閲覧寿命）',
+	'PRUNE_OLD_POLLS'			=> '投票トピックをプルーニングする',
+	'PRUNE_OLD_POLLS_EXPLAIN'		=> '返信寿命が過ぎても投票されなかった投票トピックを削除します',
+	'PRUNE_STICKY'				=> '注目トピックをプルーニングする',
+	'PRUNE_SUCCESS'				=> 'フォーラムのプルーニングに成功しました',
 
-	'TOPICS_PRUNED'		=> 'Topics pruned',
+	'TOPICS_PRUNED'		=> 'プルーニングされたトピック',
 ));

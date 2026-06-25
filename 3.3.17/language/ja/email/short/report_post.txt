@@ -1,13 +1,16 @@
-Subject: Post report - "{TOPIC_TITLE}"
+Subject: 記事に通報がありました - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-The post "{POST_SUBJECT}" at "{SITENAME}" was reported.
+フォーラムサイト "{SITENAME}" に於いて
+記事 "{POST_SUBJECT}"
 
-If you want to view the report, click the following link:
+に通報がありました。
+
+通報を確認したい場合はこちらのリンクをクリックしてください：
 {U_VIEW_REPORT}
 
-If you want to view the post, click the following link:
+記事を確認したい場合はこちらのリンクをクリックしてください：
 {U_VIEW_POST}
 
 {EMAIL_SIG}

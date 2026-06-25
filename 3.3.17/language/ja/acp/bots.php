@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* acp_bots [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -38,35 +42,35 @@ if (empty($lang) || !is_array($lang))
 
 // Bot settings
 $lang = array_merge($lang, array(
-	'BOTS'				=> 'Manage bots',
-	'BOTS_EXPLAIN'		=> '“Bots”, “spiders” or “crawlers” are automated agents most commonly used by search engines to update their databases. Since they rarely make proper use of sessions they can distort visitor counts, increase load and sometimes fail to index sites correctly. Here you can define a special type of user to overcome these problems.',
-	'BOT_ACTIVATE'		=> 'Activate',
-	'BOT_ACTIVE'		=> 'Bot active',
-	'BOT_ADD'			=> 'Add bot',
-	'BOT_ADDED'			=> 'New bot successfully added.',
-	'BOT_AGENT'			=> 'Agent match',
-	'BOT_AGENT_EXPLAIN'	=> 'A string matching the bots browser agent, partial matches are allowed.',
-	'BOT_DEACTIVATE'	=> 'Deactivate',
-	'BOT_DELETED'		=> 'Bot deleted successfully.',
-	'BOT_EDIT'			=> 'Edit bots',
-	'BOT_EDIT_EXPLAIN'	=> 'Here you can add or edit an existing bot entry. You may define an agent string and/or one or more IP addresses (or range of addresses) to match. Be careful when defining matching agent strings or addresses. You may also specify a style and language that the bot will view the board using. This may allow you to reduce bandwidth use by setting a simple style for bots. Remember to set appropriate permissions for the special Bot usergroup.',
-	'BOT_LANG'			=> 'Bot language',
-	'BOT_LANG_EXPLAIN'	=> 'The language presented to the bot as it browses.',
-	'BOT_LAST_VISIT'	=> 'Last visit',
-	'BOT_IP'			=> 'Bot IP address',
-	'BOT_IP_EXPLAIN'	=> 'Partial matches are allowed, separate addresses with a comma.',
-	'BOT_NAME'			=> 'Bot name',
-	'BOT_NAME_EXPLAIN'	=> 'Used only for your own information.',
-	'BOT_NAME_TAKEN'	=> 'The name is already in use on your board and can’t be used for the Bot.',
-	'BOT_NEVER'			=> 'Never',
-	'BOT_STYLE'			=> 'Bot style',
-	'BOT_STYLE_EXPLAIN'	=> 'The style used for the board by the bot.',
-	'BOT_UPDATED'		=> 'Existing bot updated successfully.',
+	'BOTS'				=> 'ボットの管理',
+	'BOTS_EXPLAIN'			=> 'ボット、スパイダー、クローラとはロボット型ウェブページ巡回プログラムの事です。それらは、検索エンジンのデータベースを構築するためにキーワードや画像を収集したり、スパムメールを送信するためにメールアドレスを収集したり、アダルトサイトへの広告のために強引に記事を投稿していく等をサイト管理者の断り無く勝手に行います。これらが “ゲスト” ユーザーとしてサイトにアクセスした場合、セッションをめったに正常に扱わないためオンラインデータをおかしくしたり、サーバ負荷を増大させたり、検索されたくないページが検索エンジンに引っかかってしまったりします。ここではこれらの問題に対処するため、どのユーザーエージェントまたは IPアドレス が “ボット” ユーザーなのかを指定できます。',
+	'BOT_ACTIVATE'			=> '有効にする',
+	'BOT_ACTIVE'			=> 'ボットを有効にする',
+	'BOT_ADD'			=> 'ボットの追加',
+	'BOT_ADDED'			=> 'ボットの追加に成功しました',
+	'BOT_AGENT'			=> 'HTTPユーザーエージェント',
+	'BOT_AGENT_EXPLAIN'		=> 'ボットの HTTPユーザーエージェント に部分的にマッチする文字列です',
+	'BOT_DEACTIVATE'		=> '無効にする',
+	'BOT_DELETED'			=> 'ボットの削除に成功しました',
+	'BOT_EDIT'			=> '編集',
+	'BOT_EDIT_EXPLAIN'		=> 'ここでは ボットの追加 または エントリー済みのボットの編集 を行うことができます。HTTPユーザーエージェント または複数 IPアドレス （範囲指定も可）を指定できます。ボットが閲覧した時の掲示板のスタイルと言語も指定できます。なるべくシンプルなスタイルを選択する事によってボットによる回線の混雑を緩和させる事ができるでしょう。パーミッション設定ページで適切なパーミッションを “ボット” グループに対して設定する事を忘れないでください。',
+	'BOT_LANG'			=> '言語',
+	'BOT_LANG_EXPLAIN'		=> 'ボットが閲覧する掲示板の言語です',
+	'BOT_LAST_VISIT'		=> '最近の訪問日時',
+	'BOT_IP'			=> 'IPアドレス',
+	'BOT_IP_EXPLAIN'		=> '部分一致としてワイルドカード(*)を使用できます。複数入力する場合はアドレスをコンマで区切ってください。',
+	'BOT_NAME'			=> 'ボット名',
+	'BOT_NAME_EXPLAIN'		=> 'ボットの名前を入力してください。他のボットと区別するために使用されます。',
+	'BOT_NAME_TAKEN'		=> 'その名前は既にユーザー名として使われているのでボット名には使えません',
+	'BOT_NEVER'			=> '未訪問',
+	'BOT_STYLE'			=> '掲示板のスタイル',
+	'BOT_STYLE_EXPLAIN'		=> 'ボットが閲覧する掲示板のスタイルです',
+	'BOT_UPDATED'			=> 'ボット情報の更新に成功しました',
+	
+	'ERR_BOT_AGENT_MATCHES_UA'	=> '指定した HTTPユーザーエージェント は現在使用しているものと被ります。被らない様に調節してください。',
+	'ERR_BOT_NO_IP'			=> '指定した IPアドレス が正しくないかホスト名が存在していません',
+	'ERR_BOT_NO_MATCHES'		=> '少なくとも１つの HTTPユーザーエージェント または IPアドレス にマッチさせる必要があります',
 
-	'ERR_BOT_AGENT_MATCHES_UA'	=> 'The bot agent you supplied is similar to the one you are currently using. Please adjust the agent for this bot.',
-	'ERR_BOT_NO_IP'				=> 'The IP addresses you supplied were invalid or the hostname could not be resolved.',
-	'ERR_BOT_NO_MATCHES'		=> 'You must supply at least one of an agent or IP for this bot match.',
-
-	'NO_BOT'		=> 'Found no bot with the specified ID.',
-	'NO_BOT_GROUP'	=> 'Unable to find special bot group.',
+	'NO_BOT'			=> '指定した ID を持つボットが見つかりませんでした',
+	'NO_BOT_GROUP'			=> '特別グループ “ボット” が見つかりませんでした',
 ));

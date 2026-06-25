@@ -1,13 +1,12 @@
 <?php
 /**
 *
-* This file is part of the phpBB Forum Software package.
+* viewforum [Japanese]
 *
-* @copyright (c) phpBB Limited <https://www.phpbb.com>
-* @license GNU General Public License, version 2 (GPL-2.0)
-*
-* For full copyright and license information, please see
-* the docs/CREDITS.txt file.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
@@ -37,37 +36,36 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACTIVE_TOPICS'			=> 'Active topics',
-	'ANNOUNCEMENTS'			=> 'Announcements',
+	'ACTIVE_TOPICS'			=> '最近のトピック',
+	'ANNOUNCEMENTS'			=> '告知トピック',
 
-	'FORUM_PERMISSIONS'		=> 'Forum permissions',
+	'FORUM_PERMISSIONS'		=> 'フォーラムパーミッション',
 
-	'ICON_ANNOUNCEMENT'		=> 'Announcement',
-	'ICON_STICKY'			=> 'Sticky',
+	'ICON_ANNOUNCEMENT'		=> '告知トピック',
+	'ICON_STICKY'			=> '注目トピック',
 
-	'LOGIN_NOTIFY_FORUM'	=> 'You have been notified about this forum, please login to view it.',
+	'LOGIN_NOTIFY_FORUM'	=> 'ウォッチ中のフォーラムに新しい記事が投稿されています。ログインして記事をご確認ください。',
 
-	'MARK_TOPICS_READ'		=> 'Mark topics read',
+	'MARK_TOPICS_READ'		=> 'すべてのトピックを既読にする',
 
-	'NEW_POSTS_HOT'			=> 'New posts [ Popular ]',	// Not used anymore
-	'NEW_POSTS_LOCKED'		=> 'New posts [ Locked ]',	// Not used anymore
-	'NO_NEW_POSTS_HOT'		=> 'No new posts [ Popular ]',	// Not used anymore
-	'NO_NEW_POSTS_LOCKED'	=> 'No new posts [ Locked ]',	// Not used anymore
-	'NO_READ_ACCESS'		=> 'You do not have the required permissions to view or read topics within this forum.',
-	'NO_FORUMS_IN_CATEGORY'	=> 'This category has no forums.',
-	'NO_UNREAD_POSTS_HOT'		=> 'No unread posts [ Popular ]',
-	'NO_UNREAD_POSTS_LOCKED'	=> 'No unread posts [ Locked ]',
+	'NEW_POSTS_HOT'			=> '新しい記事あり [ 人気 ]',	// Not used anymore
+	'NEW_POSTS_LOCKED'		=> '新しい記事あり [ 閉鎖中 ]',	// Not used anymore
+	'NO_NEW_POSTS_HOT'		=> '新しい記事なし [ 人気 ]',	// Not used anymore
+	'NO_NEW_POSTS_LOCKED'		=> '新しい記事なし [ 閉鎖中 ]',	// Not used anymore
+	'NO_READ_ACCESS'		=> 'このフォーラムの記事を閲覧するにはパーミッションが必要です',
+	'NO_FORUMS_IN_CATEGORY'		=> 'このカテゴリ内にはフォーラムはありません',
+	'NO_UNREAD_POSTS_HOT'		=> '未読記事なし [ 人気 ]',
+	'NO_UNREAD_POSTS_LOCKED'	=> '未読記事なし [ 閉鎖中 ]',
 
-	'POST_FORUM_LOCKED'		=> 'Forum is locked',
+	'POST_FORUM_LOCKED'		=> 'フォーラムは閉鎖中 [ 投稿禁止 ] です',
 
-	'TOPICS_MARKED'			=> 'The topics for this forum have now been marked read.',
+	'TOPICS_MARKED'			=> 'フォーラムのトピックをすべて既読にしました',
 
-	'UNREAD_POSTS_HOT'		=> 'Unread posts [ Popular ]',
-	'UNREAD_POSTS_LOCKED'	=> 'Unread posts [ Locked ]',
+	'UNREAD_POSTS_HOT'		=> '未読記事あり [ 人気 ]',
+	'UNREAD_POSTS_LOCKED'	=> '未読記事あり [ 閉鎖中 ]',
 
-	'VIEW_FORUM'			=> 'View forum',
+	'VIEW_FORUM'			=> 'フォーラム閲覧',
 	'VIEW_FORUM_TOPICS'		=> array(
-		1	=> '%d topic',
-		2	=> '%d topics',
+		1	=> '%d 件のトピック',
 	),
 ));

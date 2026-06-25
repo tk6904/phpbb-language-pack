@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* acp_language [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -37,42 +41,42 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACP_FILES'						=> 'Admin language files',
-	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Here you are able to install/remove language packs. The default language pack is marked with an asterisk (*).',
+	'ACP_FILES'				=> 'Admin',
+	'ACP_LANGUAGE_PACKS_EXPLAIN'		=> 'ここでは言語パックの インストール/アンインストール を行うことができます。アスタリスク(*)は掲示板のデフォルト言語を意味しています。',
 
-	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'DELETE_LANGUAGE_CONFIRM'		=> '“%s”を削除してもよろしいですか？',
 
-	'INSTALLED_LANGUAGE_PACKS'		=> 'Installed language packs',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'インストール済み言語パック',
 
-	'LANGUAGE_DETAILS_UPDATED'			=> 'Language details successfully updated.',
-	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'This language pack is already installed.',
-	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
-	'LANGUAGE_PACK_DETAILS'				=> 'Language pack details',
-	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
-	'LANGUAGE_PACK_CPF_UPDATE'			=> 'The custom profile fields’ language strings were copied from the default language. Please change them if necessary.',
+	'LANGUAGE_DETAILS_UPDATED'			=> '言語データの更新に成功しました',
+	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'この言語パックは既にインストールされています',
+	'LANGUAGE_PACK_DELETED'				=> '言語パック “%s” のアンインストールに成功しました。同時にこの言語パックを使用していた全ユーザーのユーザー設定オプション “掲示板の言語” を “掲示板のデフォルト言語” に変更しました。',
+	'LANGUAGE_PACK_DETAILS'				=> '言語パックのデータ',
+	'LANGUAGE_PACK_INSTALLED'			=> '言語パック “%s” のインストールに成功しました',
+	'LANGUAGE_PACK_CPF_UPDATE'			=> 'カスタムプロフィールフィールドの文字情報はデフォルト言語のものを受け継ぎました。必要であれば変更してください。',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
-	'LANGUAGE_PACK_LOCALNAME'			=> 'Local name',
-	'LANGUAGE_PACK_NAME'				=> 'Name',
-	'LANGUAGE_PACK_NOT_EXIST'			=> 'The selected language pack does not exist.',
-	'LANGUAGE_PACK_USED_BY'				=> 'Used by (including robots)',
-	'LANGUAGE_VARIABLE'					=> 'Language variable',
-	'LANG_AUTHOR'						=> 'Language pack author',
-	'LANG_ENGLISH_NAME'					=> 'English name',
-	'LANG_ISO_CODE'						=> 'ISO code',
-	'LANG_LOCAL_NAME'					=> 'Local name',
+	'LANGUAGE_PACK_LOCALNAME'			=> 'ローカル言語名',
+	'LANGUAGE_PACK_NAME'				=> '名前',
+	'LANGUAGE_PACK_NOT_EXIST'			=> '言語パックが存在していません',
+	'LANGUAGE_PACK_USED_BY'				=> '使用ユーザー数 （ボット含む）',
+	'LANGUAGE_VARIABLE'					=> '言語値',
+	'LANG_AUTHOR'						=> '言語パック作成者',
+	'LANG_ENGLISH_NAME'					=> '英語名',
+	'LANG_ISO_CODE'						=> 'ISOコード',
+	'LANG_LOCAL_NAME'					=> 'ローカル言語名',
 
-	'MISSING_LANG_FILES'		=> 'Missing language files',
-	'MISSING_LANG_VARIABLES'	=> 'Missing language variables',
+	'MISSING_LANG_FILES'		=> '言語ファイルが見つかりません',
+	'MISSING_LANG_VARIABLES'	=> '言語値が見つかりません',
 
-	'NO_FILE_SELECTED'				=> 'You haven’t specified a language file.',
-	'NO_LANG_ID'					=> 'You haven’t specified a language pack.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
-	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'No uninstalled language packs',
+	'NO_FILE_SELECTED'			=> '言語ファイルを指定していません',
+	'NO_LANG_ID'				=> '言語パックを指定していません',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'デフォルト言語である言語パックをアンインストールする事はできません。<br />この言語パックをアンインストールするには掲示板のデフォルト言語を先に変更してください。',
+	'NO_UNINSTALLED_LANGUAGE_PACKS'		=> '言語パックがインストールされていません',
 
-	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
+	'THOSE_MISSING_LANG_FILES'		=> '次の言語ファイルが言語フォルダ %s 内に見つかりませんでした',
+	'THOSE_MISSING_LANG_VARIABLES'		=> '次の言語値が言語パック “%s” 内に見つかりませんでした',
 
-	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Uninstalled language packs',
+	'UNINSTALLED_LANGUAGE_PACKS'		=> '未インストール状態の言語パック',
 
-	'BROWSE_LANGUAGE_PACKS_DATABASE'	=> 'Browse language packs database',
+	'BROWSE_LANGUAGE_PACKS_DATABASE'	=> '言語パックデータベースを表示する',
 ));

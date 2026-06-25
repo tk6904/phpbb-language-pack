@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* plupload [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -38,42 +42,42 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'PLUPLOAD_ADD_FILES'		=> 'Add files',
-	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
-	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
-	'PLUPLOAD_CLOSE'			=> 'Close',
-	'PLUPLOAD_DRAG'				=> 'Drag files here.',
-	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
-	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
-	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
-	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
-	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
-	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
-	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
-	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
-	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
-	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
-	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
-	'PLUPLOAD_FILE'				=> 'File: %s',
-	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
-	'PLUPLOAD_FILENAME'			=> 'Filename',
-	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
-	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
-	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
-	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
-	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
-	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_ADD_FILES'		=> 'ファイルを追加',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'アップロードキューにファイルを追加し、開始ボタンをクリックしてください。',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s はキューにすでに追加されています',
+	'PLUPLOAD_CLOSE'		=> '閉じる',
+	'PLUPLOAD_DRAG'			=> 'ここにファイルをドラッグしてください',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'ファイル複製エラー',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'メッセージボックス内にドラッグ＆ドロップしてファイルを追加することもできます',
+	'PLUPLOAD_ERR_INPUT'		=> 'ファイルの読み込みに失敗しました',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'アップロード済みファイルの移動に失敗しました',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'ファイルオープンに失敗しました',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'ファイルが大きすぎます:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'ファイルカウントエラー',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> '不明なファイル拡張子です:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> '使用可能なメモリの不足により強制終了しました',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'アップロードしたURLが間違っているか、あるいは存在していません',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'ファイル拡張子エラー',
+	'PLUPLOAD_FILE'			=> 'ファイル: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'ファイル: %s, サイズ: %d, 最大ファイルサイズ: %d',
+	'PLUPLOAD_FILENAME'		=> 'ファイル名',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d ファイルが待機状態です',
+	'PLUPLOAD_GENERIC_ERROR'	=> '一般的なエラー',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP エラー',
+	'PLUPLOAD_IMAGE_FORMAT'		=> '画像フォーマットが間違っているか、あるいはサポートされていません。',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init エラー',
+	'PLUPLOAD_IO_ERROR'		=> 'IO エラー',
 	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
-	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
-	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
-	'PLUPLOAD_SIZE'				=> 'Size',
-	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
-	'PLUPLOAD_STATUS'			=> 'Status',
-	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
-	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
-	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
-	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'セキュリティエラー',
+	'PLUPLOAD_SELECT_FILES'		=> 'ファイルを選択',
+	'PLUPLOAD_SIZE'			=> 'サイズ',
+	'PLUPLOAD_SIZE_ERROR'		=> 'ファイルサイズエラー',
+	'PLUPLOAD_STATUS'		=> 'ステータス',
+	'PLUPLOAD_START_UPLOAD'		=> 'アップロードを開始する',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'アップロードキューを開始する',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'アップロードを中止する',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> '現在のアップロードを中止する',
 	// Note: This string is formatted independently by plupload and so does not
 	// use the same formatting rules as normal phpBB translation strings
-	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
+	'PLUPLOAD_UPLOADED'			=> ' %d/%d ファイルをアップロードしました',
 ));

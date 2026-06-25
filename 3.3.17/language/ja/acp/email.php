@@ -1,6 +1,10 @@
 <?php
 /**
 *
+* acp_email [Japanese]
+*
+* @package language
+*
 * This file is part of the phpBB Forum Software package.
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
@@ -38,31 +42,31 @@ if (empty($lang) || !is_array($lang))
 
 // Email settings
 $lang = array_merge($lang, array(
-	'ACP_MASS_EMAIL_EXPLAIN'		=> 'Here you can email a message to either all of your users or all users of a specific group <strong>having the option to receive mass emails enabled</strong>. To achieve this an email will be sent out to the administrative email address supplied, with a blind carbon copy sent to all recipients. The default setting is to only include 20 recipients in such an email, for more recipients more emails will be sent. If you are emailing a large group of people please be patient after submitting and do not stop the page halfway through. It is normal for a mass emailing to take a long time, you will be notified when the script has completed.',
-	'ALL_USERS'						=> 'All users',
+	'ACP_MASS_EMAIL_EXPLAIN'		=> 'ここでは全登録ユーザーまたは<strong>一括メールの受信オプションを有効に設定している</strong>グループにメールを送信できます。 一括メールとは実は、宛先に管理人のメールアドレスを、BCC（ブラインド・カーボン・コピー）に受信ユーザーの全メールアドレスをセットして送信したメールの事です。１つの一括メールにつき受信ユーザー数はデフォルトで最大５０人です。５０人以上のユーザーを指定した場合、一括メールは複数回に渡って送信されます。その場合、送信処理が終わるまでこのページから移動しないでください。一括メールには時間がかかるのが普通です。メール送信処理が完全に終了するとその旨のメッセージが表示されます。',
+	'ALL_USERS'				=> '全ユーザー',
 
-	'COMPOSE'				=> 'Compose',
+	'COMPOSE'				=> 'メール作成',
 
-	'EMAIL_SEND_ERROR'		=> 'There were one or more errors while sending the email. Please check the %sError log%s for detailed error messages.',
-	'EMAIL_SENT'			=> 'This message has been sent.',
-	'EMAIL_SENT_QUEUE'		=> 'This message has been queued for sending.',
+	'EMAIL_SEND_ERROR'		=> 'メール送信処理中に少なくとも一件のエラーが発生しました。詳細なメッセージを参照するには%sエラーログ%sをクリックしてください。',
+	'EMAIL_SENT'			=> 'メッセージを送信しました',
+	'EMAIL_SENT_QUEUE'		=> 'このメッセージは送信待ちです',
 
-	'LOG_SESSION'			=> 'Log mail session to critical log',
+	'LOG_SESSION'			=> 'メールセッション情報をエラーログに記録する',
 
-	'SEND_IMMEDIATELY'		=> 'Send immediately',
-	'SEND_TO_GROUP'			=> 'Send to group',
-	'SEND_TO_USERS'			=> 'Send to users',
-	'SEND_TO_USERS_EXPLAIN'	=> 'Entering names here will override any group selected above. Enter each username on a new line.',
+	'SEND_IMMEDIATELY'		=> '今すぐに送信する',
+	'SEND_TO_GROUP'			=> 'グループへ送信',
+	'SEND_TO_USERS'			=> 'ユーザーへ送信',
+	'SEND_TO_USERS_EXPLAIN'		=> 'ここでユーザー名を入力した場合、上で選択したグループは無効になります。１行につき１つのユーザー名を入力してください。',
+	
+	'MAIL_BANNED'			=> 'アクセス禁止ユーザーへ送信',
+	'MAIL_BANNED_EXPLAIN'		=> 'グループへ送信する際、グループ内に存在するアクセス禁止ユーザーに対してもメールを送信したい場合はチェックしてください',
+	'MAIL_HIGH_PRIORITY'		=> '高',
+	'MAIL_LOW_PRIORITY'		=> '低',
+	'MAIL_NORMAL_PRIORITY'		=> '普通',
+	'MAIL_PRIORITY'			=> 'メール緊急度',
+	'MASS_MESSAGE'			=> 'メッセージ本文',
+	'MASS_MESSAGE_EXPLAIN'		=> '平文を入力してください。BBCode や HTML は使用できません。',
 
-	'MAIL_BANNED'			=> 'Mail banned users',
-	'MAIL_BANNED_EXPLAIN'	=> 'When sending a mass email to a group you can select here whether banned users will also receive the email.',
-	'MAIL_HIGH_PRIORITY'	=> 'High',
-	'MAIL_LOW_PRIORITY'		=> 'Low',
-	'MAIL_NORMAL_PRIORITY'	=> 'Normal',
-	'MAIL_PRIORITY'			=> 'Mail priority',
-	'MASS_MESSAGE'			=> 'Your message',
-	'MASS_MESSAGE_EXPLAIN'	=> 'Please note that you may enter only plain text. All markup will be removed before sending.',
-
-	'NO_EMAIL_MESSAGE'		=> 'You must enter a message.',
-	'NO_EMAIL_SUBJECT'		=> 'You must specify a subject for your message.',
+	'NO_EMAIL_MESSAGE'		=> 'メッセージ本文を入力してください',
+	'NO_EMAIL_SUBJECT'		=> '件名を入力してください',
 ));

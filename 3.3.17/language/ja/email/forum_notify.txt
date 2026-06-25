@@ -1,18 +1,22 @@
-Subject: Reply in "{FORUM_NAME}"
-List-Unsubscribe: <{U_STOP_WATCHING_FORUM}>
+Subject: 返信記事の通知 - フォーラム "{FORUM_NAME}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-The "{FORUM_NAME}" received a new reply to the topic "{TOPIC_TITLE}"<!-- IF AUTHOR_NAME != '' --> by {AUTHOR_NAME}<!-- ENDIF --> since your last visit to "{SITENAME}". No more notifications will be sent until you visit the topic.
+フォーラムサイト "{SITENAME}" に於いて
+フォーラム "{FORUM_NAME}" の
+トピック "{TOPIC_TITLE}" で
+
+<!-- IF AUTHOR_NAME !== '' --> {AUTHOR_NAME} さんから<!-- ENDIF -->返信記事が投稿されました。
+今後、そのトピックを訪問するまで通知は送られません。
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+トピックを確認するにはこちらをクリックしてください：
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+フォーラムを確認するにはこちらをクリックしてください：
 {U_FORUM}
 
-If you no longer wish to watch this forum click the following link:
+新着記事の通知メールを停止したい場合はこちらをクリックしてください：
 {U_STOP_WATCHING_FORUM}
 
 {EMAIL_SIG}
