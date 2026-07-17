@@ -44,7 +44,7 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'TERMS_OF_USE_CONTENT'	=> ' “%1$s” (以下 “私達”, “掲示板”, “当サイト”, “%1$s”, “%2$s”) を利用するに当たって、あなたは以下の規約に同意しているものと見なされます。規約に同意しない場合、 “%1$s” の利用を行わないでください。私達はいつでもこの規約を変更できます。更新・変更された後も “%1$s” を利用している間、あなたは常にこれらの規約に同意しているものと見なされます。
 	<br><br>
-	当サイトは phpBB （以下 “phpBBソフトウェア”, “www.phpbb.com”, “phpBB Group”, “phpBB Teams”) によって構築されています。phpBBソフトウェア は “<a href="http://opensource.org/licenses/gpl-2.0.php">General Public License v2</a>” （以下 “GPL”) 下でリリースされたフォーラムソリューションであり、<a href="https://www.phpbb.com/">www.phpbb.com</a> にてダウンロードできます。phpBBソフトウェア はインターネットでの議論やコミュニケーションをより円滑に行うために phpBB Group によって開発されましたが、phpBB Group は phpBBソフトウェア 上でなされた議論の内容やユーザーの行為には一切責任を負いません。phpBB に関する詳細な情報を知るには <a href="https://www.phpbb.com/">https://www.phpbb.com/</a> をご覧ください。
+	当サイトは phpBB （以下 “phpBBソフトウェア”, “www.phpbb.com”, “phpBB Group”, “phpBB Teams”) によって構築されています。phpBBソフトウェア は “<a href="https://opensource.org/license/gpl-2-0">General Public License v2</a>” （以下 “GPL”) 下でリリースされたフォーラムソリューションであり、<a href="https://www.phpbb.com/">www.phpbb.com</a> にてダウンロードできます。phpBBソフトウェア はインターネットでの議論やコミュニケーションをより円滑に行うために phpBB Group によって開発されましたが、phpBB Group は phpBBソフトウェア 上でなされた議論の内容やユーザーの行為には一切責任を負いません。phpBB に関する詳細な情報を知るには <a href="https://www.phpbb.com/">https://www.phpbb.com/</a> をご覧ください。
 	<br><br>
 	口汚い記事、猥褻な言葉、品性を欠く記事、他人を中傷する記事、嫌悪感を与える記事、脅迫的な記事、性的差別につながる記事、 “%1$s” のホストサーバが存在する国の法律または国際法に違反する記事、以上を投稿しないことをあなたは同意します。この規約を破った場合、対象ユーザーのアカウント停止が即座に行われます（場合によっては対象ユーザーのプロバイダに報告されます）。この措置を実行するため、全ての投稿記事には投稿者の IPアドレス が記録されます。 “%1$s” は必要と判断すればいつでも掲示板の投稿記事を削除、編集、移動、凍結、閉鎖できることをあなたは同意します。あなたが掲示板で入力した情報はデータベースに保管されることをあなたは同意します。あなたの同意がない限りこの情報は第三者に公開されることはありませんが、ハッキング等によるデータの損傷や盗難があった場合、 “%1$s” と phpBB はその責を負いません。
 	',

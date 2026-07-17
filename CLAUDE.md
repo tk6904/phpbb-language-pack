@@ -13,7 +13,7 @@ Japanese
 ```
 
 - 4 行目に `ltr` を書かない（DIRECTION は `language/ja/common.php` の `$lang['DIRECTION']` 側で指定する）
-- 末尾改行は 1 つだけ（空行を追加しない）
+- **末尾改行を入れない**（3 行目の著者名の直後でファイルが終わる。末尾に `\n` があるとバリデータ 1.6.1 は「空の 4 行目」と数えてリジェクトする。2 回目の審査で実際にリジェクトされた）
 
 ### `acp/posting.php` の以下のキーには `[2]` を**追加しない**
 
@@ -28,6 +28,10 @@ TOO_MANY_SMILIES
 日本語は `[1]` のみ（必要なら `[0]` も）が正規。第三者の検証ツールは `[2]` 欠落を warning にすることがあるが、**phpBB 公式審査では `[2]` を持たせるとリジェクトされる**。誤検知に合わせて埋めないこと。
 
 phpBB の Japanese plural rule は count に関わらず `1` を返すので、`[2]` を埋めても実行時には参照されず、配布物としては不要な重複。
+
+### URL は en の最新版に合わせる
+
+`ucp.php` の `TERMS_OF_USE_CONTENT` の GPL リンクは `https://opensource.org/license/gpl-2-0`（新形式）。旧リンク `http://opensource.org/licenses/gpl-2.0.php` のままだと審査で「additional html」エラーになる（2 回目の審査で実際に指摘された）。長文の法的文言でも、**訳文を維持したまま `<a href>` の URL・タグ構成だけは en と完全一致させる**こと。
 
 ## ディレクトリ構成
 
