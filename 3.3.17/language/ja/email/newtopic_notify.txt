@@ -6,7 +6,7 @@ Subject: 新着トピック - フォーラム "{FORUM_NAME}"
 フォーラム "{FORUM_NAME}" に
 新しいトピック "{TOPIC_TITLE}"
 
-が投稿されました。<!-- IF AUTHOR_NAME !== '' --> （投稿者： {AUTHOR_NAME} さん<!-- ENDIF -->
+が投稿されました<!-- IF AUTHOR_NAME !== '' --> （投稿者： {AUTHOR_NAME} さん）。<!-- ENDIF -->
 フォーラムを見るまで新たな通知が送られる事はありません。
 {U_FORUM}
 
