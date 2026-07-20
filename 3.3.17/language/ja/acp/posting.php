@@ -148,7 +148,6 @@ $lang = array_merge($lang, array(
 	'ICONS_ADDED'			=> array(
 		0	=> 'アイコンは追加されませんでした',
 		1	=> 'アイコンの追加に成功しました',
-		2	=> 'アイコンの追加に成功しました',
 	),
 	'ICONS_CONFIG'			=> 'アイコン設定',
 	'ICONS_DELETED'			=> 'アイコンの削除に成功しました',
@@ -156,7 +155,6 @@ $lang = array_merge($lang, array(
 	'ICONS_EDITED'			=> array(
 		0	=> 'アイコンは更新されませんでした',
 		1	=> 'アイコンの更新に成功しました',
-		2	=> 'アイコンの更新に成功しました',
 	),
 	'ICONS_HEIGHT'			=> '画像の高さ (pix)',
 	'ICONS_IMAGE'			=> 'アイコン画像',
@@ -192,7 +190,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_ADDED'				=> array(
 		0	=> 'スマイリーは追加されませんでした',
 		1	=> 'スマイリーの追加に成功しました',
-		2	=> 'スマイリーの追加に成功しました',
 	),
 	'SMILIES_CODE'				=> 'スマイリーコード',
 	'SMILIES_CONFIG'			=> 'スマイリー設定',
@@ -201,7 +198,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_EDITED'			=> array(
 		0	=> 'スマイリーは更新されませんでした',
 		1	=> 'スマイリーの更新に成功しました',
-		2	=> 'スマイリーの更新に成功しました',
 	),
 	'SMILIE_NO_CODE'			=> 'コードが未入力だったため、スマイリー “%s” は無視されました',
 	'SMILIE_NO_EMOTION'			=> '意味が未入力だったため、スマイリー “%s” は無視されました',
@@ -219,7 +215,6 @@ $lang = array_merge($lang, array(
 
 	'TOO_MANY_SMILIES'			=> array(
 		1	=> 'スマイリーが最大数 %d に達しています',
-		2	=> 'スマイリーが最大数 %d に達しています',
 	),
 
 	'WRONG_PAK_TYPE'	=> '指定したパック内のデータが適切なデータではありません',
