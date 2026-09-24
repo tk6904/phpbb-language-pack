@@ -105,17 +105,25 @@ php tools/ext_verify.php \
 - **`$lang` の PHP ファイルで `{VAR}` を placeholder 扱いしない。** phpBB が `$lang` 内で置換するのは `%s` 系だけ。`{VAR}` が実際の置換対象なのは `email/*.txt` のみ。`acp/posting.php` の `tokens` は説明文中に `{LOCAL_URL}` と書いている。
 - **`Subject:` 行の有無は en と照合する。** en 側にも `Subject:` を持たないテンプレートがある（`admin_send_email.txt` など）。
 
-### 既知の FAIL（3.3.18 時点・未修正）
+### 既知の FAIL
 
-3.3.17 以前から持ち越しているもの。自分の変更が原因ではない。
+**3.3.18 は FAIL 0 件（PASS）。** バージョンディレクトリを追加したら、まず `lang_verify.php` を流して PASS を確認してから作業を始めること。
+
+3.3.17 には以下の 6 件が残っている。リリース済みの履歴として手を付けていない。3.3.18 では修正済みなので、3.3.17 を新バージョンのベースにする場合は取り込むこと。
 
 | 箇所 | 内容 |
 |---|---|
-| `ucp.php:FIELD_TOO_SMALL` / `FIELD_TOO_LARGE` | placeholder の型と順序が en と逆（`%1$d`/`%2$s` ↔ `%1$s`/`%2$d`）。**実行時に表示が壊れる** |
+| `ucp.php:FIELD_TOO_SMALL` / `FIELD_TOO_LARGE` | placeholder の型と順序が en と逆（`%1$d`/`%2$s` ↔ `%1$s`/`%2$d`）。phpBB は `(最小値, フィールド名)` の順で渡すので、**フィールド名の位置に数値が出て閾値の位置に `0` が出る** |
 | `acp/board.php:ACP_COOKIE_SETTINGS_EXPLAIN` | en 末尾の phpBB.com ナレッジベースへのリンクが訳から脱落 |
 | `help/bbcode.php:HELP_BBCODE_LINKS_BASIC_ANSWER` | 2 本のリンクが `http://`（en は `https://`） |
 | `help/faq.php:HELP_FAQ_ISSUES_WHOIS_PHPBB_ANSWER` | `https://www.phpbb.com/about/` へのリンクが脱落。「phpBB Group」表記も en の「phpBB Limited」と不一致 |
-| `install.php:UPDATE_INSTRUCTIONS` | en の 4 本のリンクのうち 2 本が脱落 |
+| `install.php:UPDATE_INSTRUCTIONS` | 訳が古い版のままで、「フルパッケージでアップデートする方法」の章が丸ごと欠落（推奨手順）。en の 4 本のリンクのうち 2 本が脱落するのはこれが原因 |
+
+### 長い HTML を訳し直すときは en を雛形にする
+
+`UPDATE_INSTRUCTIONS` のように markup の多い値は、訳文を一から書かずに **en の値をコピーしてテキストノードだけ差し替える**。タグの数・順序・属性が自動的に一致する。
+
+それでも順序は崩し得る。3.3.18 の修正時、「パッケージ側から削除する」の文で `<em>` を `<code>` 群より前に動かしてしまい、**タグ件数は 95 対 95 で一致したまま順序だけ違う**状態を作った。`lang_verify.php` の WARN は件数ではなく並びを見ているので拾えた。件数一致を根拠に安心しないこと。
 
 ### 未実装（必要になったら書く）
 
