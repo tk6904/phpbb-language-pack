@@ -212,8 +212,8 @@ $lang = array_merge($lang, array(
 	'FIELD_TOO_LONG'					=> array(
 		1	=> 'フィールド “%2$s” の値が長すぎます。%1$d 字以下である必要があります。',
 	),
-	'FIELD_TOO_SMALL'					=> 'フィールド “%1$s” の値が小さすぎます。%2$d 以上である必要があります。',
-	'FIELD_TOO_LARGE'					=> 'フィールド “%1$s” の値が大きすぎます。%2$d 以下である必要があります。',
+	'FIELD_TOO_SMALL'					=> 'フィールド “%2$s” の値が小さすぎます。%1$d 以上である必要があります。',
+	'FIELD_TOO_LARGE'					=> 'フィールド “%2$s” の値が大きすぎます。%1$d 以下である必要があります。',
 
 
 	'FIELD_INVALID_CHARS_INVALID'		=> 'フィールド “%s” の値は無効です',

@@ -358,24 +358,47 @@ $lang = array_merge($lang, array(
 
 		<h1>リリースのお知らせ</h1>
 
-		<p>アップデートを行う前に the release announcement for the latest version をご覧ください。そちらにダウンロードリンクとアップデートによる変更ログが含まれています</p>
+		<p>アップデートを進める前に、最新バージョンのリリースのお知らせをお読みください。有用な情報が含まれている場合があります。ダウンロードリンク一式と変更履歴も掲載されています。</p>
 
-		<br>
+		<br />
 
-		<h1>高度なアップデート</h1>
+		<h1>フルパッケージでアップデートする方法</h1>
 
-		<p>高度なアップデートパッケージは、phpBB のコアファイルを変更している場合の上級者向けの方法として推奨されます。INSTALL.html で紹介されているアップデート方法でアップデートすることももちろん可能です。高度なアップデートのステップは:</p>
+		<p>推奨されるアップデート方法はフルパッケージを使う方法です。phpBB のコアファイルを変更している場合は、その変更を失わないために高度なアップデートパッケージを使うとよいでしょう。INSTALL.html に記載されている他の方法でアップデートすることもできます。フルパッケージで phpBB3 をアップデートする手順は次のとおりです:</p>
 
+		<ol style="margin-left: 20px; font-size: 1.1em;">
+			<li><strong class="error">掲示板の全ファイルとデータベースをバックアップしてください。</strong></li>
+			<li><a href="https://www.phpbb.com/downloads/" title="https://www.phpbb.com/downloads/">phpBB.com のダウンロードページ</a> から最新の "Full Package" アーカイブをダウンロードします。</li>
+			<li>アーカイブを解凍します。</li>
+			<li><code class="inline">config.php</code> ファイルと、<code class="inline">/images</code>・<code class="inline">/store</code>・<code class="inline">/files</code> の各フォルダを <em>パッケージ側から</em> 削除します（サイト側ではありません）。</li>
+			<li>管理者用コントロールパネルの掲示板設定を開き、既定のスタイルが prosilver になっていることを確認します。違う場合は prosilver に変更します。</li>
+			<li>サーバ上の掲示板のルートフォルダから <code class="inline">/vendor</code> と <code class="inline">/cache</code> フォルダを削除します。</li>
+			<li>FTP または SSH で、残ったファイルとフォルダ（つまり phpBB3 フォルダの中身）をサーバ上の掲示板のルートフォルダへアップロードし、既存のファイルを上書きします。（注意: 新しい phpBB3 の中身をアップロードする際、<code class="inline">/ext</code> フォルダ内の拡張機能を消してしまわないよう気をつけてください。）</li>
+			<li><strong><a href="%1$s" title="%1$s">ブラウザで install フォルダを開き、アップデートを開始してください</a>。</strong></li>
+			<li>画面の手順に従ってデータベースを更新し、完了するまで実行します。</li>
+			<li>FTP または SSH で、掲示板のルートから <code class="inline">/install</code> フォルダを削除します。<br><br></li>
+		</ol>
+
+		<p>これで、ユーザーと記事をすべて引き継いだ最新の掲示板になりました。続けて次の作業を行ってください:</p>
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li><a href="https://www.phpbb.com/downloads/" title="https://www.phpbb.com/downloads/">phpBB.com downloads page</a> をクリックして "Advanced Update Package" をダウンロードする<br><br></li>
-			<li>ダウンロードしたパッケージを解凍する<br><br></li>
-			<li>解凍して出てきたフォルダ install/ を phpBB3 ルートディレクトリ （config.php が存在するディレクトリ） にアップロードする<br><br></li>
+			<li>言語パックを更新する</li>
+			<li>スタイルを更新する<br><br></li>
 		</ul>
 
-		<p>アップロードが完了すると一般ユーザーは全てオフライン状態に移行します<br /><br />
-		<strong><a href="%1$s" title="%1$s">こちらをクリック</a>してアップデートを開始してください</strong><br>
-		<br>
-		アップデートを開始したら各プロセスの指示に従ってください。アップデートが完了するとその旨のメッセージが表示されます。
+		<h1>高度なアップデートパッケージでアップデートする方法</h1>
+
+		<p>高度なアップデートパッケージは、phpBB のコアファイルを変更している場合の上級者向けの方法としてのみ推奨されます。INSTALL.html に記載されている方法でアップデートすることもできます。高度なアップデートパッケージで phpBB3 をアップデートする手順は次のとおりです:</p>
+
+		<ol style="margin-left: 20px; font-size: 1.1em;">
+			<li><a href="https://www.phpbb.com/downloads/" title="https://www.phpbb.com/downloads/">phpBB.com のダウンロードページ</a> から "Advanced Update Package" アーカイブをダウンロードします。</li>
+			<li>アーカイブを解凍します。</li>
+			<li>解凍した "install" と "vendor" フォルダをそのまま phpBB のルートディレクトリ（config.php が置かれている場所）へアップロードします。<br><br></li>
+		</ol>
+
+		<p>アップロードすると install ディレクトリが存在する状態になるため、一般ユーザーから見て掲示板はオフラインになります。<br /><br />
+		<strong><a href="%1$s" title="%1$s">ブラウザで install フォルダを開き、アップデートを開始してください</a>。</strong><br />
+		<br />
+		この後はアップデート手順の案内に従ってください。完了するとその旨が表示されます。
 		</p>
 	',
 ));
