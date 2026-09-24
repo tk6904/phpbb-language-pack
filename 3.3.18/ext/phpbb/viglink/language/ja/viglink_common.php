@@ -3,7 +3,7 @@
  *
  * VigLink extension for the phpBB Forum Software package.
  *
- * @copyright (c) 2014 phpBB Limited <https://www.phpbb.com>
+ * @copyright (c) 2026 phpBB Limited <https://www.phpbb.com>
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
@@ -38,6 +38,6 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'ACP_VIGLINK_SETTINGS'		=> 'VigLink 設定',
-	'LOG_VIGLINK_CHECK_FAIL'	=> '<strong>VigLink 設定はphpBB.comで検証できませんでした</strong><br>» %s',
+	'VIGLINK'				=> 'VigLink (Sovrn)',
+	'VIGLINK_DESCRIPTION'	=> 'アフィリエイト報酬を集計するため、サードパーティのスクリプトと Cookie を使用して外部の販売者サイトへの訪問を追跡します。',
 ));
