@@ -62,6 +62,59 @@ phpBB 本体のフルパッケージに同梱されない別配布の拡張の�
 
 3.3.17 側の `ext/phpbb/webpushnotifications/language/ja/` は履歴として温存してあるので、訳文が必要になったらそこから拾える。
 
+## 新バージョンのリリース手順
+
+マイナーリリースごとに、気づいた不具合もあわせて直していく方針。
+
+### 1. ベースは「直前の完成版」
+
+`3.3.19/` は **`3.3.18/` をコピーして作る**。`3.3.17/` はリリース済みの履歴として凍結してあり、[既知の FAIL](#既知の-fail) 6 件がそのまま残っているので、ここをベースにしてはいけない。
+
+### 2. 上流の言語差分を `language/en/` に当てる
+
+phpBB 側が公開する差分（3.3.18 のときは [gist](https://gist.github.com/marc1706/7853fe3ffc8dba51e4fcb8a276f17038)）を `language/en/` に適用し、新規・変更されたキーだけを `language/ja/` で訳す。
+
+### 3. 公式フルパッケージの中身を必ず確認する
+
+**差分だけを信用しない。** 公式フルパッケージをダウンロードして展開し、実物と突き合わせること。
+
+3.3.18 では `ext/phpbb/viglink/language/en/viglink_common.php` が新規追加されていたが、**この gist の言語差分には載っていなかった**。フルパッケージを開いて初めて気づいたもので、差分だけ追っていたら 1 ファイル欠けたまま出荷していた。
+
+確認する点:
+
+```bash
+# バージョンが期待どおりか
+grep PHPBB_VERSION <pkg>/includes/constants.php
+
+# ext/ に何が同梱されているか（増減を見る）
+ls <pkg>/ext/phpbb/
+
+# ext の言語ファイルが増えていないか
+find <pkg>/ext -path '*/language/en/*' -name '*.php'
+
+# styles の言語別アセット
+ls -d <pkg>/styles/prosilver/theme/*/
+```
+
+`ext/` の en はリポジトリに持たないので、この展開済みパッケージが `ext_verify.php` の比較元になる。
+
+### 4. 検証を通す
+
+```bash
+php tools/lang_verify.php 3.3.19
+php tools/ext_verify.php "<pkg>/ext/phpbb/viglink/language/en" 3.3.19/ext/phpbb/viglink/language/ja
+```
+
+`lang_verify.php` は **FAIL 0 件**にする。WARN は既存訳由来のものが 70 件前後あるので全部は潰さなくてよいが、**自分が新規追加・変更したキーの WARN は必ず潰す**。
+
+### 5. 配布 ZIP を再生成する
+
+[配布 ZIP に含めるもの](#配布-zip-に含めるもの)の 3 パスのみ。生成後、ZIP の中身が作業ツリーとバイト一致することと、前バージョンの ZIP との構成差分が意図どおりかを確認する。
+
+### 6. 気づいた不具合を直す
+
+検証で出た FAIL は、上流差分と無関係な既存不具合でもそのリリースで直す。直したら CLAUDE.md の「既知の FAIL」表を更新する。
+
 ## 翻訳ベース
 
 `language/ja/` は phpBB 3.3.4 公式日本語パック（imagina, ocean=Yohsuke, hamasaki_takeshi, Takefumi Tenshima）をベースに、3.3.17 までの差分を反映している。`iso.txt` の 3 行目はこの履歴に従い 4 名を併記している。
