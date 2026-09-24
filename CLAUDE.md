@@ -46,6 +46,22 @@ phpBB の Japanese plural rule は count に関わらず `1` を返すので、`
 
 `language/en/` は翻訳作業の参照用で、配布 ZIP には含めない。
 
+### 配布 ZIP に含めるもの
+
+配布 ZIP には**公式フルパッケージに対応物が存在するものだけ**を同梱する。現状の対象は 3 つ。
+
+| ZIP 内 | 公式パッケージ側の対応 |
+|---|---|
+| `language/ja/` | `language/en/` |
+| `ext/phpbb/viglink/language/ja/` | `ext/phpbb/viglink/` |
+| `styles/prosilver/theme/ja/` | `styles/prosilver/theme/en/` |
+
+**`phpbb/webpushnotifications` は含めない。リポジトリにも置かない（3.3.18 以降）。**
+
+phpBB 本体のフルパッケージに同梱されない別配布の拡張のため。3.3.18 の公式フルパッケージ（`PHPBB_VERSION = '3.3.18'`、`phpbb/` 875 ファイルの完全版）を全文検索して、**ファイル名・ファイル内容とも 0 ヒット**であることを実測で確認済み。3.3.17 の配布 ZIP も従来からこの拡張を除外していた。
+
+3.3.17 側の `ext/phpbb/webpushnotifications/language/ja/` は履歴として温存してあるので、訳文が必要になったらそこから拾える。
+
 ## 翻訳ベース
 
 `language/ja/` は phpBB 3.3.4 公式日本語パック（imagina, ocean=Yohsuke, hamasaki_takeshi, Takefumi Tenshima）をベースに、3.3.17 までの差分を反映している。`iso.txt` の 3 行目はこの履歴に従い 4 名を併記している。

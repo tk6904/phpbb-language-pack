@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * phpBB Browser Push Notifications. An extension for the phpBB Forum Software package.
+ * VigLink extension for the phpBB Forum Software package.
  *
- * @copyright (c) 2023, phpBB Limited <https://www.phpbb.com>
+ * @copyright (c) 2026 phpBB Limited <https://www.phpbb.com>
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
@@ -18,7 +18,7 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = [];
+	$lang = array();
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -37,9 +37,7 @@ if (empty($lang) || !is_array($lang))
 // ’ » “ ” …
 //
 
-$lang = array_merge($lang, [
-	'PHPBB_VERSION_MAX_ERROR'	=> 'この拡張機能はこの掲示板にはインストールできません。これはphpBB 4の掲示板であり、この拡張機能の機能がすでに含まれています。',
-	'PHPBB_VERSION_MIN_ERROR'	=> 'phpBB ' . \phpbb\webpushnotifications\ext::PHPBB_MIN_VERSION . 'またはそれ以降が必要です。',
-	'PHP_VERSION_ERROR'			=> 'PHP ' . \phpbb\webpushnotifications\ext::PHP_MIN_VERSION . 'またはそれ以降が必要です。',
-	'PHP_EXT_MISSING'			=> 'サーバーにPHPの「%s」拡張機能をインストールする必要があります。',
-]);
+$lang = array_merge($lang, array(
+	'VIGLINK'				=> 'VigLink (Sovrn)',
+	'VIGLINK_DESCRIPTION'	=> 'アフィリエイト報酬を集計するため、サードパーティのスクリプトと Cookie を使用して外部の販売者サイトへの訪問を追跡します。',
+));
