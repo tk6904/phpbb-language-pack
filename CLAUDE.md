@@ -68,9 +68,56 @@ phpBB 本体のフルパッケージに同梱されない別配布の拡張の�
 
 ## 検証スクリプト
 
-`/tmp/.../scratchpad/` に検証用の補助 PHP スクリプトを置いていたが、セッションを跨ぐと消える。必要なら同じ仕様で書き直すこと：
+`tools/` に置いてある。以前は scratchpad に置いてセッションごとに書き直していたが、実際に消えて書き直す事故が起きたのでリポジトリ入りにした。**書き直さずにこれを使うこと。**
 
-- `lang_verify.php` — en と ja の `$lang` キー集合一致と `php -l` 一括検証
+```bash
+php tools/lang_verify.php 3.3.18          # phpBB 本体分（language/en を基準に language/ja を検証）
+php tools/ext_verify.php <en-dir> <ja-dir>  # 拡張機能分
+```
+
+`ext/` の en はリポジトリに持たない（公式フルパッケージから都度参照する）ため、本体用とは別スクリプトにしてある。
+
+```bash
+php tools/ext_verify.php \
+  "/path/to/phpBB3/ext/phpbb/viglink/language/en" \
+  3.3.18/ext/phpbb/viglink/language/ja
+```
+
+### FAIL と WARN の区別
+
+**FAIL（終了コード 1）** — 放置しない。
+
+- `php -l` / `$lang` キー集合 / placeholder 集合 / href の並び
+- `iso.txt` の行数と末尾改行、`acp/posting.php` の `[2]`、`ucp.php` の GPL リンク形式
+- `email/*.txt` のファイル集合・placeholder・`Subject:` 行の有無
+- 訳文への英語原文の混入
+
+**WARN（終了コードに影響しない）** — HTML タグ列の件数差。
+
+既存訳には日本語の改行都合で `<br />` を足した箇所が 75 件あり、**この状態で phpBB 公式審査を通過している**ため一律 FAIL にはしない。ただし SUPPORT_BODY の空 `<li>`（3.3.18 で修正）と viglink の `<a>` 二重化（同）を拾ったのはこの観点なので、**新規・変更したキーについては WARN も必ず潰すこと**。
+
+### 誤検知を作り込まないための注意
+
+過去に実際に踏んだもの。同じ罠を再実装しないこと。
+
+- **複数形配列を添字ごとに比較しない。** 日本語は `[1]` のみが正規なので、en の `[1]='1 icon'` / `[2]='%d icons'` とは必ず食い違う。配列は全体を連結してから比較する。
+- **placeholder は出現回数ではなく集合で比較する。** 訳文で同じ変数を繰り返すのは正当。
+- **`$lang` の PHP ファイルで `{VAR}` を placeholder 扱いしない。** phpBB が `$lang` 内で置換するのは `%s` 系だけ。`{VAR}` が実際の置換対象なのは `email/*.txt` のみ。`acp/posting.php` の `tokens` は説明文中に `{LOCAL_URL}` と書いている。
+- **`Subject:` 行の有無は en と照合する。** en 側にも `Subject:` を持たないテンプレートがある（`admin_send_email.txt` など）。
+
+### 既知の FAIL（3.3.18 時点・未修正）
+
+3.3.17 以前から持ち越しているもの。自分の変更が原因ではない。
+
+| 箇所 | 内容 |
+|---|---|
+| `ucp.php:FIELD_TOO_SMALL` / `FIELD_TOO_LARGE` | placeholder の型と順序が en と逆（`%1$d`/`%2$s` ↔ `%1$s`/`%2$d`）。**実行時に表示が壊れる** |
+| `acp/board.php:ACP_COOKIE_SETTINGS_EXPLAIN` | en 末尾の phpBB.com ナレッジベースへのリンクが訳から脱落 |
+| `help/bbcode.php:HELP_BBCODE_LINKS_BASIC_ANSWER` | 2 本のリンクが `http://`（en は `https://`） |
+| `help/faq.php:HELP_FAQ_ISSUES_WHOIS_PHPBB_ANSWER` | `https://www.phpbb.com/about/` へのリンクが脱落。「phpBB Group」表記も en の「phpBB Limited」と不一致 |
+| `install.php:UPDATE_INSTRUCTIONS` | en の 4 本のリンクのうち 2 本が脱落 |
+
+### 未実装（必要になったら書く）
+
 - `text_drift.php` — 旧バージョン en と新バージョン en の値差分（既存 ja 訳の陳腐化検出）
 - `email_drift.php` — `email/*.txt` のバージョン間差分
-- `validate_all.php` — placeholder / HTML タグ / 配列形状の網羅チェック（誤検知に注意：複数形 `[2]` 欠落や `<p>` 不整合は phpBB 公式仕様）
