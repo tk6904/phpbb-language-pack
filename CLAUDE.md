@@ -62,6 +62,59 @@ phpBB 本体のフルパッケージに同梱されない別配布の拡張の�
 
 3.3.17 側の `ext/phpbb/webpushnotifications/language/ja/` は履歴として温存してあるので、訳文が必要になったらそこから拾える。
 
+## 新バージョンのリリース手順
+
+マイナーリリースごとに、気づいた不具合もあわせて直していく方針。
+
+### 1. ベースは「直前の完成版」
+
+`3.3.19/` は **`3.3.18/` をコピーして作る**。`3.3.17/` はリリース済みの履歴として凍結してあり、[既知の FAIL](#既知の-fail) 6 件がそのまま残っているので、ここをベースにしてはいけない。
+
+### 2. 上流の言語差分を `language/en/` に当てる
+
+phpBB 側が公開する差分（3.3.18 のときは [gist](https://gist.github.com/marc1706/7853fe3ffc8dba51e4fcb8a276f17038)）を `language/en/` に適用し、新規・変更されたキーだけを `language/ja/` で訳す。
+
+### 3. 公式フルパッケージの中身を必ず確認する
+
+**差分だけを信用しない。** 公式フルパッケージをダウンロードして展開し、実物と突き合わせること。
+
+3.3.18 では `ext/phpbb/viglink/language/en/viglink_common.php` が新規追加されていたが、**この gist の言語差分には載っていなかった**。フルパッケージを開いて初めて気づいたもので、差分だけ追っていたら 1 ファイル欠けたまま出荷していた。
+
+確認する点:
+
+```bash
+# バージョンが期待どおりか
+grep PHPBB_VERSION <pkg>/includes/constants.php
+
+# ext/ に何が同梱されているか（増減を見る）
+ls <pkg>/ext/phpbb/
+
+# ext の言語ファイルが増えていないか
+find <pkg>/ext -path '*/language/en/*' -name '*.php'
+
+# styles の言語別アセット
+ls -d <pkg>/styles/prosilver/theme/*/
+```
+
+`ext/` の en はリポジトリに持たないので、この展開済みパッケージが `ext_verify.php` の比較元になる。
+
+### 4. 検証を通す
+
+```bash
+php tools/lang_verify.php 3.3.19
+php tools/ext_verify.php "<pkg>/ext/phpbb/viglink/language/en" 3.3.19/ext/phpbb/viglink/language/ja
+```
+
+`lang_verify.php` は **FAIL 0 件**にする。WARN は既存訳由来のものが 70 件前後あるので全部は潰さなくてよいが、**自分が新規追加・変更したキーの WARN は必ず潰す**。
+
+### 5. 配布 ZIP を再生成する
+
+[配布 ZIP に含めるもの](#配布-zip-に含めるもの)の 3 パスのみ。生成後、ZIP の中身が作業ツリーとバイト一致することと、前バージョンの ZIP との構成差分が意図どおりかを確認する。
+
+### 6. 気づいた不具合を直す
+
+検証で出た FAIL は、上流差分と無関係な既存不具合でもそのリリースで直す。直したら CLAUDE.md の「既知の FAIL」表を更新する。
+
 ## 翻訳ベース
 
 `language/ja/` は phpBB 3.3.4 公式日本語パック（imagina, ocean=Yohsuke, hamasaki_takeshi, Takefumi Tenshima）をベースに、3.3.17 までの差分を反映している。`iso.txt` の 3 行目はこの履歴に従い 4 名を併記している。
@@ -105,17 +158,25 @@ php tools/ext_verify.php \
 - **`$lang` の PHP ファイルで `{VAR}` を placeholder 扱いしない。** phpBB が `$lang` 内で置換するのは `%s` 系だけ。`{VAR}` が実際の置換対象なのは `email/*.txt` のみ。`acp/posting.php` の `tokens` は説明文中に `{LOCAL_URL}` と書いている。
 - **`Subject:` 行の有無は en と照合する。** en 側にも `Subject:` を持たないテンプレートがある（`admin_send_email.txt` など）。
 
-### 既知の FAIL（3.3.18 時点・未修正）
+### 既知の FAIL
 
-3.3.17 以前から持ち越しているもの。自分の変更が原因ではない。
+**3.3.18 は FAIL 0 件（PASS）。** バージョンディレクトリを追加したら、まず `lang_verify.php` を流して PASS を確認してから作業を始めること。
+
+3.3.17 には以下の 6 件が残っている。リリース済みの履歴として手を付けていない。3.3.18 では修正済みなので、3.3.17 を新バージョンのベースにする場合は取り込むこと。
 
 | 箇所 | 内容 |
 |---|---|
-| `ucp.php:FIELD_TOO_SMALL` / `FIELD_TOO_LARGE` | placeholder の型と順序が en と逆（`%1$d`/`%2$s` ↔ `%1$s`/`%2$d`）。**実行時に表示が壊れる** |
+| `ucp.php:FIELD_TOO_SMALL` / `FIELD_TOO_LARGE` | placeholder の型と順序が en と逆（`%1$d`/`%2$s` ↔ `%1$s`/`%2$d`）。phpBB は `(最小値, フィールド名)` の順で渡すので、**フィールド名の位置に数値が出て閾値の位置に `0` が出る** |
 | `acp/board.php:ACP_COOKIE_SETTINGS_EXPLAIN` | en 末尾の phpBB.com ナレッジベースへのリンクが訳から脱落 |
 | `help/bbcode.php:HELP_BBCODE_LINKS_BASIC_ANSWER` | 2 本のリンクが `http://`（en は `https://`） |
 | `help/faq.php:HELP_FAQ_ISSUES_WHOIS_PHPBB_ANSWER` | `https://www.phpbb.com/about/` へのリンクが脱落。「phpBB Group」表記も en の「phpBB Limited」と不一致 |
-| `install.php:UPDATE_INSTRUCTIONS` | en の 4 本のリンクのうち 2 本が脱落 |
+| `install.php:UPDATE_INSTRUCTIONS` | 訳が古い版のままで、「フルパッケージでアップデートする方法」の章が丸ごと欠落（推奨手順）。en の 4 本のリンクのうち 2 本が脱落するのはこれが原因 |
+
+### 長い HTML を訳し直すときは en を雛形にする
+
+`UPDATE_INSTRUCTIONS` のように markup の多い値は、訳文を一から書かずに **en の値をコピーしてテキストノードだけ差し替える**。タグの数・順序・属性が自動的に一致する。
+
+それでも順序は崩し得る。3.3.18 の修正時、「パッケージ側から削除する」の文で `<em>` を `<code>` 群より前に動かしてしまい、**タグ件数は 95 対 95 で一致したまま順序だけ違う**状態を作った。`lang_verify.php` の WARN は件数ではなく並びを見ているので拾えた。件数一致を根拠に安心しないこと。
 
 ### 未実装（必要になったら書く）
 

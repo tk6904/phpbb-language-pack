@@ -355,7 +355,7 @@ $lang = array_merge($lang, array(
 
 // Cookie Settings
 $lang = array_merge($lang, array(
-	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'ここでは cookie の設定を行うことができます。多くの場合、デフォルト設定のままで十分です。デフォルト設定を変更する場合は十分注意して行ってください。間違った設定をしてしまうと登録ユーザーがログインできなくなります。',
+	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'ここでは cookie の設定を行うことができます。多くの場合、デフォルト設定のままで十分です。デフォルト設定を変更する場合は十分注意して行ってください。間違った設定をしてしまうと登録ユーザーがログインできなくなります。ユーザーがログイン状態を維持できない問題が起きている場合は、<strong><a href="https://www.phpbb.com/support/go/cookie-settings">phpBB.com ナレッジベース - cookie 設定の誤りを修正する</a></strong> をご覧ください。',
 
 	'COOKIE_DOMAIN'					=> 'cookie ドメイン',
 	'COOKIE_DOMAIN_EXPLAIN'			=> 'たいていの場合、cookie ドメインの設定は任意です。不明な場合は空欄にしてください。<br><br>もしあなたが <i>example.com</i> ドメインをお持ちで、 <i>forums.example.com</i> のようなサブドメインを１つお持ちの場合、もしくは <i>forums.example.com</i> 、<i>blog.example.com</i> のような複数のサブドメインをお持ちの場合、サブドメインを削除してください 例 <i>example.com</i>。現在は .example.com のようにドメインの先頭にドットを付けて入力するようにしてください。',

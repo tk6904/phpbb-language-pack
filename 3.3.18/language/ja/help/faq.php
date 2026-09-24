@@ -98,7 +98,7 @@ $lang = array_merge($lang, array(
 	'HELP_FAQ_ISSUES_FEATURE_QUESTION'	=> '必要な機能がありません',
 	'HELP_FAQ_ISSUES_LEGAL_ANSWER'	=> ' “管理・運営チーム” の各 Adminユーザー が正しい連絡先であるはずです。もし誰も返答してくれない場合、あるいはもしこのサイトが無料サイト （例: Yahoo!, free.fr, f2s.com など） で運営されている場合、ドメイン所持者 （<a href="http://www.google.com/search?q=whois">whois lookup</a> 検索で調べてください） に連絡すべきです。phpBB Group には、誰が何処でどのようにこの掲示板を使用するかについて干渉する<strong>権限は全くない</strong>ということにご注意ください。phpBB Group に phpbb.com や phpBBソフトウェア と<strong>直接関わりのない</strong>法的問題 （裁判所からの停止命令、損害賠償、名誉棄損など） に関することを問い合わせないでください。<strong>第三者</strong>による phpBB の使用に関して phpBB Group にメールで問い合わせても回答は簡単なものか全くされないものとお考えください。',
 	'HELP_FAQ_ISSUES_LEGAL_QUESTION'	=> 'この掲示板に関連した不正・法的問題については誰に問い合わせればいいのでしょうか？',
-	'HELP_FAQ_ISSUES_WHOIS_PHPBB_ANSWER'	=> 'このソフトウェアの作成を行ったのは <a href="https://www.phpbb.com/">phpBB Group</a> であり著作権は phpBB Group が所有しています。phpBB は GNU General Public License（GNU が提唱するライセンス形態、GPL） に定められている条件に従って使用や配布が許諾されています。詳細については phpBB Group のサイトをご参照ください。',
+	'HELP_FAQ_ISSUES_WHOIS_PHPBB_ANSWER'	=> 'このソフトウェアは（未改変の状態において）<a href="https://www.phpbb.com/">phpBB Limited</a> が製作・公開しており、著作権も同社が保有しています。GNU General Public License, version 2 (GPL-2.0) のもとで提供されており、自由に配布できます。詳細は <a href="https://www.phpbb.com/about/">About phpBB</a> をご覧ください。',
 	'HELP_FAQ_ISSUES_WHOIS_PHPBB_QUESTION'	=> 'この掲示板ソフトウェアを作成したのは誰ですか？',
 
 	'HELP_FAQ_LOGIN_AUTO_LOGOUT_ANSWER'	=> 'ログインする際にチェックボックス “自動ログインを有効にする” をチェックしなかった場合、掲示板はそのログインセッションのみしかログイン状態を保とうとしないため、セッションの有効期限が過ぎるとログイン状態も自然に解除されます。この事はあなたのアカウントが他人に悪用される事を防いでくれます。常にログイン状態を保ちたい場合、このチェックボックスをチェックしてからログインしてください。この自動ログイン機能は図書館、インターネットカフェ、大学などの共有されたコンピュータ環境では利用しないことをお勧めします。もしログインの際にこのチェックボックスが表示されない場合、それは管理人がこの機能を無効に設定している事を意味します。',
